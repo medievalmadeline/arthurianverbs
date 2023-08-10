@@ -1,0 +1,3400 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        body {
+            margin: auto;
+            padding: 50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .story-body,
+        .header,
+        .chart-section,
+        .footer {
+            margin: auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .chart-section.wide {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .chart-section.wide p.chart-subhead {
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* text styles */
+
+        /* https://cssgenerator.org/text-shadow-css-generator.html */
+        /* #shadow {
+            text-shadow: 3px 4px 2px rgba(233, 105, 105, 0.6);
+        } */
+
+
+        p.kicker {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom: 0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        h3.section-head {
+            font-size: 2rem;
+            margin: 40px 0 10px 0;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+        p.note {
+            font-size: 0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top: 0px;
+        }
+
+
+        .chart-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        p.chart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            max-width: 700px;
+            margin: 0px auto 5px auto;
+        }
+
+        p.chart-subhead {
+            margin: 0 auto;
+            max-width: 700px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        p.chart-label {
+            margin: 0 0 5px 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .chart-row .chart {
+            width: 100%;
+            padding-right: 15px;
+            min-width: calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding: 30px 0px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            max-width: 1200px;
+        }
+
+        .photo {
+            width: 100%;
+            padding-right: 15px;
+        }
+
+        .photo img {
+            width: 100%;
+        }
+
+        p.caption {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* mobile */
+        @media (max-width:700px) {
+
+            .chart-row {
+                display: block;
+            }
+
+            .chart-row .chart {
+                padding: 0;
+            }
+
+            .photo-section {
+                display: block;
+            }
+
+            .photo {
+                padding: 0;
+            }
+
+        }
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+
+        #g-template-laptop,
+        #g-template-medium,
+        #g-template-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-template-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-template-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px) {
+            #g-template-medium {
+                display: block;
+            }
+        }
+    </style>
+
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+
+    <title>This is your title</title>
+</head>
+
+<body class="light-theme">
+    <!-- all of the content on your html page goes inside the body -->
+
+    <section class="header">
+        <p class="kicker">Optional kicker</p>
+        <h1 class="headline">Here is your headline</h1>
+        <h2 class="subhead">This is the subhead</h2>
+        <p class="byline">By YOUR NAME</p>
+        <p class="date">Published September 9, 2019</p>
+    </section>
+
+    <section class="story-body">
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section class="chart-section">
+        <div class="chart-row">
+            <div class="chart">
+
+                <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+
+<!-- Generated by ai2html v0.111.0 - 2023-08-09 20:21 -->
+<!-- ai file: practice.ai -->
+<style media="screen,print">
+	#g-practice-box ,
+	#g-practice-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-practice-box p {
+		margin:0;
+	}
+	#g-practice-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-practice-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-practice-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-practice-box .g-aiPointText p { white-space: nowrap; }
+	#g-practice-lg {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-practice-lg p {
+		font-weight:500;
+		line-height:18px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:15px;
+		text-align:left;
+		color:rgb(184,91,30);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-practice-lg .g-pstyle0 {
+		font-weight:700;
+		line-height:26px;
+		font-size:22px;
+		text-align:right;
+	}
+	#g-practice-lg .g-pstyle1 {
+		font-weight:700;
+		line-height:17px;
+		font-size:14px;
+		text-align:right;
+	}
+	#g-practice-lg .g-pstyle2 {
+		font-weight:700;
+		line-height:20px;
+		font-size:17px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-lg .g-pstyle3 {
+		font-weight:700;
+		line-height:26px;
+		font-size:22px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle4 {
+		font-weight:700;
+		line-height:17px;
+		font-size:14px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle5 {
+		height:18px;
+	}
+	#g-practice-lg .g-pstyle6 {
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle7 {
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-practice-lg .g-pstyle8 {
+		line-height:26px;
+		height:26px;
+		font-size:22px;
+	}
+	#g-practice-lg .g-pstyle9 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle10 {
+		line-height:30px;
+		height:30px;
+		font-size:25px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle11 {
+		line-height:17px;
+		height:17px;
+		font-size:14px;
+	}
+	#g-practice-lg .g-pstyle12 {
+		line-height:22px;
+		height:22px;
+		font-size:19px;
+	}
+	#g-practice-lg .g-pstyle13 {
+		line-height:33px;
+		height:33px;
+		font-size:28px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle14 {
+		line-height:20px;
+		height:20px;
+		font-size:17px;
+	}
+	#g-practice-lg .g-pstyle15 {
+		line-height:25px;
+		height:25px;
+		font-size:20px;
+	}
+	#g-practice-lg .g-pstyle16 {
+		line-height:25px;
+		height:25px;
+		font-size:21px;
+	}
+	#g-practice-lg .g-pstyle17 {
+		line-height:29px;
+		height:29px;
+		font-size:24px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle18 {
+		line-height:51px;
+		height:51px;
+		font-size:43px;
+	}
+	#g-practice-lg .g-pstyle19 {
+		line-height:51px;
+		height:51px;
+		font-size:42px;
+	}
+	#g-practice-lg .g-pstyle20 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle21 {
+		line-height:20px;
+		height:20px;
+		font-size:16px;
+	}
+	#g-practice-lg .g-pstyle22 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+	}
+	#g-practice-lg .g-pstyle23 {
+		line-height:36px;
+		height:36px;
+		font-size:30px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle24 {
+		line-height:20px;
+		height:20px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle25 {
+		line-height:34px;
+		height:34px;
+		font-size:28px;
+	}
+	#g-practice-lg .g-pstyle26 {
+		line-height:43px;
+		height:43px;
+		font-size:36px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle27 {
+		line-height:17px;
+		height:17px;
+		font-size:14px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle28 {
+		height:18px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-pstyle29 {
+		line-height:30px;
+		height:30px;
+		font-size:25px;
+	}
+	#g-practice-lg .g-pstyle30 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+	}
+	#g-practice-lg .g-pstyle31 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+	}
+	#g-practice-lg .g-pstyle32 {
+		line-height:28px;
+		height:28px;
+		font-size:23px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-lg .g-cstyle0 {
+		font-size:19px;
+	}
+	#g-practice-xs {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-practice-xs p {
+		font-weight:500;
+		line-height:11px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:9px;
+		text-align:left;
+		color:rgb(184,91,30);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-practice-xs .g-pstyle0 {
+		line-height:16px;
+		font-size:13px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle1 {
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle2 {
+		height:11px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle3 {
+		height:11px;
+		text-align:center;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle4 {
+		line-height:17px;
+		font-size:14px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle5 {
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle6 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle7 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle8 {
+		line-height:27px;
+		height:27px;
+		font-size:22px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle9 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle10 {
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		text-align:center;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle11 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle12 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle13 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+		text-align:center;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle14 {
+		line-height:22px;
+		height:22px;
+		font-size:19px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle15 {
+		line-height:17px;
+		font-size:14px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-xs .g-pstyle16 {
+		height:11px;
+	}
+	#g-practice-xs .g-pstyle17 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+	}
+	#g-practice-xs .g-pstyle18 {
+		height:11px;
+		text-align:center;
+	}
+	#g-practice-xs .g-pstyle19 {
+		line-height:21px;
+		height:21px;
+		font-size:18px;
+	}
+	#g-practice-xs .g-pstyle20 {
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+	}
+	#g-practice-xs .g-pstyle21 {
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+		text-align:center;
+	}
+	#g-practice-xs .g-pstyle22 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-practice-xs .g-pstyle23 {
+		line-height:13px;
+		height:13px;
+		font-size:10px;
+	}
+	#g-practice-xs .g-pstyle24 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+	}
+	#g-practice-xs .g-pstyle25 {
+		line-height:17px;
+		font-size:11px;
+	}
+	#g-practice-xs .g-pstyle26 {
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-practice-xs .g-pstyle27 {
+		line-height:13px;
+		height:13px;
+		font-size:10px;
+		text-align:center;
+	}
+	#g-practice-xs .g-pstyle28 {
+		line-height:15px;
+		height:15px;
+		font-size:13px;
+	}
+	#g-practice-xs .g-pstyle29 {
+		line-height:17px;
+		font-size:14px;
+	}
+	#g-practice-xs .g-pstyle30 {
+		line-height:24px;
+		height:24px;
+		font-size:20px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-xs .g-pstyle31 {
+		line-height:15px;
+		font-size:20px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-xs .g-pstyle32 {
+		line-height:32px;
+		height:32px;
+		font-size:27px;
+	}
+	#g-practice-xs .g-pstyle33 {
+		line-height:32px;
+		height:32px;
+		font-size:26px;
+	}
+	#g-practice-xs .g-cstyle0 {
+		font-size:14px;
+	}
+	#g-practice-sm {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-practice-sm p {
+		font-weight:500;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(184,91,30);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-practice-sm .g-pstyle0 {
+		line-height:25px;
+		font-size:21px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle1 {
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle2 {
+		height:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle3 {
+		height:17px;
+		text-align:center;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle4 {
+		line-height:26px;
+		font-size:22px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle5 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle6 {
+		line-height:29px;
+		height:29px;
+		font-size:24px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle7 {
+		line-height:28px;
+		height:28px;
+		font-size:23px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle8 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle9 {
+		line-height:42px;
+		height:42px;
+		font-size:35px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle10 {
+		line-height:27px;
+		height:27px;
+		font-size:23px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle11 {
+		line-height:30px;
+		height:30px;
+		font-size:25px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle12 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle13 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+		text-align:center;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle14 {
+		line-height:22px;
+		height:22px;
+		font-size:19px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle15 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+		text-align:center;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle16 {
+		line-height:32px;
+		height:32px;
+		font-size:27px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle17 {
+		line-height:35px;
+		height:35px;
+		font-size:29px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-sm .g-pstyle18 {
+		line-height:26px;
+		font-size:22px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-sm .g-pstyle19 {
+		height:17px;
+	}
+	#g-practice-sm .g-pstyle20 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+	}
+	#g-practice-sm .g-pstyle21 {
+		height:17px;
+		text-align:center;
+	}
+	#g-practice-sm .g-pstyle22 {
+		line-height:33px;
+		height:33px;
+		font-size:27px;
+	}
+	#g-practice-sm .g-pstyle23 {
+		line-height:24px;
+		height:24px;
+		font-size:20px;
+	}
+	#g-practice-sm .g-pstyle24 {
+		line-height:24px;
+		height:24px;
+		font-size:20px;
+		text-align:center;
+	}
+	#g-practice-sm .g-pstyle25 {
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-practice-sm .g-pstyle26 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+	}
+	#g-practice-sm .g-pstyle27 {
+		line-height:29px;
+		height:29px;
+		font-size:24px;
+	}
+	#g-practice-sm .g-pstyle28 {
+		line-height:26px;
+		font-size:17px;
+	}
+	#g-practice-sm .g-pstyle29 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+	}
+	#g-practice-sm .g-pstyle30 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		text-align:center;
+	}
+	#g-practice-sm .g-pstyle31 {
+		line-height:25px;
+		height:25px;
+		font-size:21px;
+	}
+	#g-practice-sm .g-pstyle32 {
+		line-height:20px;
+		height:20px;
+		font-size:17px;
+	}
+	#g-practice-sm .g-pstyle33 {
+		line-height:25px;
+		height:25px;
+		font-size:21px;
+		text-align:center;
+	}
+	#g-practice-sm .g-pstyle34 {
+		line-height:22px;
+		height:22px;
+		font-size:19px;
+	}
+	#g-practice-sm .g-pstyle35 {
+		line-height:26px;
+		font-size:22px;
+	}
+	#g-practice-sm .g-pstyle36 {
+		line-height:15px;
+		font-size:29px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-sm .g-pstyle37 {
+		line-height:15px;
+		font-size:20px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-sm .g-pstyle38 {
+		line-height:50px;
+		height:50px;
+		font-size:41px;
+	}
+	#g-practice-sm .g-pstyle39 {
+		line-height:49px;
+		height:49px;
+		font-size:41px;
+	}
+	#g-practice-sm .g-cstyle0 {
+		font-size:22px;
+	}
+	#g-practice-md {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-practice-md p {
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:10px;
+		text-align:left;
+		color:rgb(184,91,30);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-practice-md .g-pstyle0 {
+		line-height:18px;
+		font-size:15px;
+		text-align:right;
+	}
+	#g-practice-md .g-pstyle1 {
+		text-align:right;
+	}
+	#g-practice-md .g-pstyle2 {
+		line-height:14px;
+		font-size:12px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-md .g-pstyle3 {
+		line-height:18px;
+		font-size:15px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle4 {
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle5 {
+		height:12px;
+	}
+	#g-practice-md .g-pstyle6 {
+		line-height:15px;
+		height:15px;
+		font-size:12px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle7 {
+		line-height:15px;
+		height:15px;
+		font-size:12px;
+	}
+	#g-practice-md .g-pstyle8 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+	}
+	#g-practice-md .g-pstyle9 {
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle10 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle11 {
+		line-height:15px;
+		height:15px;
+		font-size:13px;
+	}
+	#g-practice-md .g-pstyle12 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle13 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-practice-md .g-pstyle14 {
+		line-height:17px;
+		height:17px;
+		font-size:14px;
+	}
+	#g-practice-md .g-pstyle15 {
+		line-height:20px;
+		height:20px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle16 {
+		line-height:35px;
+		height:35px;
+		font-size:29px;
+	}
+	#g-practice-md .g-pstyle17 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle18 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+	}
+	#g-practice-md .g-pstyle19 {
+		line-height:25px;
+		height:25px;
+		font-size:21px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle20 {
+		line-height:14px;
+		height:14px;
+		font-size:11px;
+	}
+	#g-practice-md .g-pstyle21 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+	}
+	#g-practice-md .g-pstyle22 {
+		line-height:30px;
+		height:30px;
+		font-size:25px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle23 {
+		height:12px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle24 {
+		line-height:20px;
+		height:20px;
+		font-size:17px;
+	}
+	#g-practice-md .g-pstyle25 {
+		line-height:13px;
+		height:13px;
+	}
+	#g-practice-md .g-pstyle26 {
+		line-height:20px;
+		height:20px;
+		font-size:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-pstyle27 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-md .g-cstyle0 {
+		font-size:13px;
+	}
+	#g-practice-Artboard_6 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-practice-Artboard_6 p {
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:10px;
+		text-align:left;
+		color:rgb(184,91,30);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-practice-Artboard_6 .g-pstyle0 {
+		line-height:18px;
+		font-size:15px;
+		text-align:right;
+	}
+	#g-practice-Artboard_6 .g-pstyle1 {
+		text-align:right;
+	}
+	#g-practice-Artboard_6 .g-pstyle2 {
+		line-height:14px;
+		font-size:12px;
+		text-align:center;
+		color:rgb(79,60,41);
+	}
+	#g-practice-Artboard_6 .g-pstyle3 {
+		line-height:18px;
+		font-size:15px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle4 {
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle5 {
+		height:12px;
+	}
+	#g-practice-Artboard_6 .g-pstyle6 {
+		line-height:15px;
+		height:15px;
+		font-size:12px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle7 {
+		line-height:15px;
+		height:15px;
+		font-size:12px;
+	}
+	#g-practice-Artboard_6 .g-pstyle8 {
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+	}
+	#g-practice-Artboard_6 .g-pstyle9 {
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle10 {
+		line-height:21px;
+		height:21px;
+		font-size:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle11 {
+		line-height:15px;
+		height:15px;
+		font-size:13px;
+	}
+	#g-practice-Artboard_6 .g-pstyle12 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle13 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-practice-Artboard_6 .g-pstyle14 {
+		line-height:17px;
+		height:17px;
+		font-size:14px;
+	}
+	#g-practice-Artboard_6 .g-pstyle15 {
+		line-height:20px;
+		height:20px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle16 {
+		line-height:35px;
+		height:35px;
+		font-size:29px;
+	}
+	#g-practice-Artboard_6 .g-pstyle17 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle18 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+	}
+	#g-practice-Artboard_6 .g-pstyle19 {
+		line-height:25px;
+		height:25px;
+		font-size:21px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle20 {
+		line-height:14px;
+		height:14px;
+		font-size:11px;
+	}
+	#g-practice-Artboard_6 .g-pstyle21 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+	}
+	#g-practice-Artboard_6 .g-pstyle22 {
+		line-height:30px;
+		height:30px;
+		font-size:25px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle23 {
+		height:12px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle24 {
+		line-height:20px;
+		height:20px;
+		font-size:17px;
+	}
+	#g-practice-Artboard_6 .g-pstyle25 {
+		line-height:13px;
+		height:13px;
+	}
+	#g-practice-Artboard_6 .g-pstyle26 {
+		line-height:20px;
+		height:20px;
+		font-size:17px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-pstyle27 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		color:rgb(72,90,147);
+	}
+	#g-practice-Artboard_6 .g-cstyle0 {
+		font-size:13px;
+	}
+
+	/* Custom CSS */
+	.g-red-text-shadow {
+    -webkit-text-stroke: 5px #fddcc4
+}
+.g-blue-text-shadow {
+    -webkit-text-stroke: 5px #d0d0e0
+}
+.g-brown-text-shadow {
+    -webkit-text-stroke: 5px #cab4a3
+}
+
+</style>
+
+<div id="g-practice-box" class="ai2html ai2html-responsive">
+
+	<!-- Artboard: lg -->
+	<div id="g-practice-lg" class="g-artboard" style="width:930px; height:334.30735370413px;" data-aspect-ratio="2.782" data-min-width="930">
+<div style=""></div>
+		<img id="g-practice-lg-img" class="g-practice-lg-img g-aiImg" alt="" src="ai2html/images/practice-lg.png"/>
+		<div id="g-ai0-1" class="g-lg g-aiAbs" style="top:5.6834%;right:40.3474%;width:6.2366%;">
+			<p class="g-pstyle0">4x<span class="g-cstyle0"> </span></p>
+			<p class="g-pstyle1">more likely to be used for men to use</p>
+		</div>
+		<div id="g-ai0-2" class="g-lg g-aiAbs" style="top:5.9825%;left:47.0071%;margin-left:-3.2258%;width:6.4516%;">
+			<p class="g-pstyle2">50/50 split</p>
+		</div>
+		<div id="g-ai0-3" class="g-lg g-aiAbs" style="top:8.6747%;right:7.7775%;width:6.2366%;">
+			<p class="g-pstyle0">52x </p>
+			<p class="g-pstyle1">more likely for men to use</p>
+		</div>
+		<div id="g-ai0-4" class="g-lg g-aiAbs" style="top:13.7598%;left:6.692%;width:7.2043%;">
+			<p class="g-pstyle3">12x </p>
+			<p class="g-pstyle4">more likely to be used for women</p>
+		</div>
+		<div id="g-ai0-5" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:32.1855%;margin-top:-9.6px;left:48.3612%;width:62px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai0-6" class="g-lg g-aiAbs g-aiPointText" style="top:32.1855%;margin-top:-9.6px;left:48.3612%;width:62px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai0-7" class="g-lg g-aiAbs g-aiPointText" style="top:32.1855%;margin-top:-9.6px;left:48.3612%;width:62px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai0-8" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:34.3151%;margin-top:-11.7px;left:35.4753%;width:51px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai0-9" class="g-lg g-aiAbs g-aiPointText" style="top:34.3151%;margin-top:-11.7px;left:35.4753%;width:51px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai0-10" class="g-lg g-aiAbs g-aiPointText" style="top:34.3151%;margin-top:-11.7px;left:35.4753%;width:51px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai0-11" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:36.409%;margin-top:-11.7px;left:47.7138%;width:71px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai0-12" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:37.2895%;margin-top:-13.7px;left:59.5994%;width:58px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai0-13" class="g-lg g-aiAbs g-aiPointText" style="top:36.409%;margin-top:-11.7px;left:47.7138%;width:71px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai0-14" class="g-lg g-aiAbs g-aiPointText" style="top:36.409%;margin-top:-11.7px;left:47.7138%;width:71px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai0-15" class="g-lg g-aiAbs g-aiPointText" style="top:37.2895%;margin-top:-13.7px;left:59.5994%;width:58px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai0-16" class="g-lg g-aiAbs g-aiPointText" style="top:37.2895%;margin-top:-13.7px;left:59.5994%;width:58px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai0-17" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:38.9958%;margin-top:-12.4px;left:38.2422%;width:63px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai0-18" class="g-lg g-aiAbs g-aiPointText" style="top:38.9958%;margin-top:-12.4px;left:38.2422%;width:63px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai0-19" class="g-lg g-aiAbs g-aiPointText" style="top:38.9958%;margin-top:-12.4px;left:38.2422%;width:63px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai0-20" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:43.4047%;margin-top:-16.1px;left:33.0418%;width:64px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai0-21" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:41.6606%;margin-top:-9.3px;left:48.2954%;width:55px;">
+			<p class="g-pstyle11">dread</p>
+		</div>
+		<div id="g-ai0-22" class="g-lg g-aiAbs g-aiPointText" style="top:47.9433%;margin-top:-31.3px;left:33.0418%;width:64px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai0-23" class="g-lg g-aiAbs g-aiPointText" style="top:43.4047%;margin-top:-16.1px;left:33.0418%;width:64px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai0-24" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:43.2362%;margin-top:-11.5px;left:62.4353%;width:68px;">
+			<p class="g-pstyle12">follow</p>
+		</div>
+		<div id="g-ai0-25" class="g-lg g-aiAbs g-aiPointText" style="top:41.6606%;margin-top:-9.3px;left:48.2954%;width:55px;">
+			<p class="g-pstyle11">dread</p>
+		</div>
+		<div id="g-ai0-26" class="g-lg g-aiAbs g-aiPointText" style="top:41.6606%;margin-top:-9.3px;left:48.2954%;width:55px;">
+			<p class="g-pstyle11">dread</p>
+		</div>
+		<div id="g-ai0-27" class="g-lg g-aiAbs g-aiPointText" style="top:43.2362%;margin-top:-11.5px;left:62.4353%;width:68px;">
+			<p class="g-pstyle12">follow</p>
+		</div>
+		<div id="g-ai0-28" class="g-lg g-aiAbs g-aiPointText" style="top:43.2362%;margin-top:-11.5px;left:62.4353%;width:68px;">
+			<p class="g-pstyle12">follow</p>
+		</div>
+		<div id="g-ai0-29" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:46.4844%;margin-top:-17.4px;left:38.2422%;width:78px;">
+			<p class="g-pstyle13">bring</p>
+		</div>
+		<div id="g-ai0-30" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:45.3385%;margin-top:-10.6px;left:55.5716%;width:69px;">
+			<p class="g-pstyle14">endure</p>
+		</div>
+		<div id="g-ai0-31" class="g-lg g-aiAbs g-aiPointText" style="top:46.4844%;margin-top:-17.4px;left:38.2422%;width:78px;">
+			<p class="g-pstyle13">bring</p>
+		</div>
+		<div id="g-ai0-32" class="g-lg g-aiAbs g-aiPointText" style="top:46.4844%;margin-top:-17.4px;left:38.2422%;width:78px;">
+			<p class="g-pstyle13">bring</p>
+		</div>
+		<div id="g-ai0-33" class="g-lg g-aiAbs g-aiPointText" style="top:45.3385%;margin-top:-10.6px;left:55.5716%;width:69px;">
+			<p class="g-pstyle14">endure</p>
+		</div>
+		<div id="g-ai0-34" class="g-lg g-aiAbs g-aiPointText" style="top:45.3385%;margin-top:-10.6px;left:55.5716%;width:69px;">
+			<p class="g-pstyle14">endure</p>
+		</div>
+		<div id="g-ai0-35" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:46.1475%;margin-top:-9.3px;left:50.0508%;width:40px;">
+			<p class="g-pstyle11">eat</p>
+		</div>
+		<div id="g-ai0-36" class="g-lg g-aiAbs g-aiPointText" style="top:46.1475%;margin-top:-9.3px;left:50.0508%;width:40px;">
+			<p class="g-pstyle11">eat</p>
+		</div>
+		<div id="g-ai0-37" class="g-lg g-aiAbs g-aiPointText" style="top:46.1475%;margin-top:-9.3px;left:50.0508%;width:40px;">
+			<p class="g-pstyle11">eat</p>
+		</div>
+		<div id="g-ai0-38" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:48.0138%;margin-top:-13.5px;left:68.7431%;width:52px;">
+			<p class="g-pstyle15">win</p>
+		</div>
+		<div id="g-ai0-39" class="g-lg g-aiAbs g-aiPointText" style="top:48.0138%;margin-top:-13.5px;left:68.7431%;width:52px;">
+			<p class="g-pstyle15">win</p>
+		</div>
+		<div id="g-ai0-40" class="g-lg g-aiAbs g-aiPointText" style="top:48.0138%;margin-top:-13.5px;left:68.7431%;width:52px;">
+			<p class="g-pstyle15">win</p>
+		</div>
+		<div id="g-ai0-41" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:48.8585%;margin-top:-13.3px;left:73.223%;width:66px;">
+			<p class="g-pstyle16">dress</p>
+		</div>
+		<div id="g-ai0-42" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:48.9723%;margin-top:-11.7px;left:61.0151%;width:49px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai0-43" class="g-lg g-aiAbs g-aiPointText" style="top:48.8585%;margin-top:-13.3px;left:73.223%;width:66px;">
+			<p class="g-pstyle16">dress</p>
+		</div>
+		<div id="g-ai0-44" class="g-lg g-aiAbs g-aiPointText" style="top:48.8585%;margin-top:-13.3px;left:73.223%;width:66px;">
+			<p class="g-pstyle16">dress</p>
+		</div>
+		<div id="g-ai0-45" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:50.3899%;margin-top:-15.5px;left:34.1414%;width:51px;">
+			<p class="g-pstyle17">die</p>
+		</div>
+		<div id="g-ai0-46" class="g-lg g-aiAbs g-aiPointText" style="top:48.9723%;margin-top:-11.7px;left:61.0151%;width:49px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai0-47" class="g-lg g-aiAbs g-aiPointText" style="top:48.9723%;margin-top:-11.7px;left:61.0151%;width:49px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai0-48" class="g-lg g-aiAbs g-aiPointText" style="top:50.3899%;margin-top:-15.5px;left:34.1414%;width:51px;">
+			<p class="g-pstyle17">die</p>
+		</div>
+		<div id="g-ai0-49" class="g-lg g-aiAbs g-aiPointText" style="top:50.3899%;margin-top:-15.5px;left:34.1414%;width:51px;">
+			<p class="g-pstyle17">die</p>
+		</div>
+		<div id="g-ai0-50" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:50.3352%;margin-top:-9.3px;left:47.7138%;width:58px;">
+			<p class="g-pstyle11">abode</p>
+		</div>
+		<div id="g-ai0-51" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:55.0644%;margin-top:-27.1px;left:87.925%;width:117px;">
+			<p class="g-pstyle18">smite</p>
+		</div>
+		<div id="g-ai0-52" class="g-lg g-aiAbs g-aiPointText" style="top:50.3352%;margin-top:-9.3px;left:47.7138%;width:58px;">
+			<p class="g-pstyle11">abode</p>
+		</div>
+		<div id="g-ai0-53" class="g-lg g-aiAbs g-aiPointText" style="top:50.3352%;margin-top:-9.3px;left:47.7138%;width:58px;">
+			<p class="g-pstyle11">abode</p>
+		</div>
+		<div id="g-ai0-54" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:51.3295%;margin-top:-9.6px;left:52.9275%;width:61px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai0-55" class="g-lg g-aiAbs g-aiPointText" style="top:55.1313%;margin-top:-27.3px;left:88.1021%;width:115px;">
+			<p class="g-pstyle19">smite</p>
+		</div>
+		<div id="g-ai0-56" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:52.0247%;margin-top:-9.9px;left:37.6988%;width:54px;">
+			<p class="g-pstyle20">grant</p>
+		</div>
+		<div id="g-ai0-57" class="g-lg g-aiAbs g-aiPointText" style="top:51.3295%;margin-top:-9.6px;left:52.9275%;width:61px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai0-58" class="g-lg g-aiAbs g-aiPointText" style="top:51.3295%;margin-top:-9.6px;left:52.9275%;width:61px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai0-59" class="g-lg g-aiAbs g-aiPointText" style="top:52.0247%;margin-top:-9.9px;left:37.6988%;width:54px;">
+			<p class="g-pstyle20">grant</p>
+		</div>
+		<div id="g-ai0-60" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:53.4825%;margin-top:-10.8px;left:64.5991%;width:73px;">
+			<p class="g-pstyle21">marvel</p>
+		</div>
+		<div id="g-ai0-61" class="g-lg g-aiAbs g-aiPointText" style="top:53.3538%;margin-top:-12.4px;left:64.4933%;width:75px;">
+			<p class="g-pstyle22">marvel</p>
+		</div>
+		<div id="g-ai0-62" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.2945%;margin-top:-19.2px;left:40.5915%;width:78px;">
+			<p class="g-pstyle23">send</p>
+		</div>
+		<div id="g-ai0-63" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:54.365%;margin-top:-10.7px;left:27.7825%;width:64px;">
+			<p class="g-pstyle24">swoon</p>
+		</div>
+		<div id="g-ai0-64" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:56.6021%;margin-top:-18.2px;left:49.7214%;width:65px;">
+			<p class="g-pstyle25">slay</p>
+		</div>
+		<div id="g-ai0-65" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:54.9106%;margin-top:-10.6px;left:58.588%;width:54px;">
+			<p class="g-pstyle14">yield</p>
+		</div>
+		<div id="g-ai0-66" class="g-lg g-aiAbs g-aiPointText" style="top:56.2945%;margin-top:-19.2px;left:40.5915%;width:78px;">
+			<p class="g-pstyle23">send</p>
+		</div>
+		<div id="g-ai0-67" class="g-lg g-aiAbs g-aiPointText" style="top:56.2945%;margin-top:-19.2px;left:40.5915%;width:78px;">
+			<p class="g-pstyle23">send</p>
+		</div>
+		<div id="g-ai0-68" class="g-lg g-aiAbs g-aiPointText" style="top:54.365%;margin-top:-10.7px;left:27.7825%;width:64px;">
+			<p class="g-pstyle24">swoon</p>
+		</div>
+		<div id="g-ai0-69" class="g-lg g-aiAbs g-aiPointText" style="top:54.365%;margin-top:-10.7px;left:27.7825%;width:64px;">
+			<p class="g-pstyle24">swoon</p>
+		</div>
+		<div id="g-ai0-70" class="g-lg g-aiAbs g-aiPointText" style="top:56.6021%;margin-top:-18.2px;left:49.7214%;width:65px;">
+			<p class="g-pstyle25">slay</p>
+		</div>
+		<div id="g-ai0-71" class="g-lg g-aiAbs g-aiPointText" style="top:56.6021%;margin-top:-18.2px;left:49.7214%;width:65px;">
+			<p class="g-pstyle25">slay</p>
+		</div>
+		<div id="g-ai0-72" class="g-lg g-aiAbs g-aiPointText" style="top:54.9106%;margin-top:-10.6px;left:58.588%;width:54px;">
+			<p class="g-pstyle14">yield</p>
+		</div>
+		<div id="g-ai0-73" class="g-lg g-aiAbs g-aiPointText" style="top:54.9106%;margin-top:-10.6px;left:58.588%;width:54px;">
+			<p class="g-pstyle14">yield</p>
+		</div>
+		<div id="g-ai0-74" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:59.2077%;margin-top:-22.9px;left:35.3963%;width:67px;">
+			<p class="g-pstyle26">tell</p>
+		</div>
+		<div id="g-ai0-75" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.3178%;margin-top:-9.3px;left:5.7389%;width:61px;">
+			<p class="g-pstyle27">rebuke</p>
+		</div>
+		<div id="g-ai0-76" class="g-lg g-aiAbs g-aiPointText" style="top:59.2077%;margin-top:-22.9px;left:35.3963%;width:67px;">
+			<p class="g-pstyle26">tell</p>
+		</div>
+		<div id="g-ai0-77" class="g-lg g-aiAbs g-aiPointText" style="top:59.2077%;margin-top:-22.9px;left:35.3963%;width:67px;">
+			<p class="g-pstyle26">tell</p>
+		</div>
+		<div id="g-ai0-78" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.6169%;margin-top:-9.3px;left:22.9625%;width:46px;">
+			<p class="g-pstyle27">heal</p>
+		</div>
+		<div id="g-ai0-79" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:57.0129%;margin-top:-9.6px;left:16.9224%;width:55px;">
+			<p class="g-pstyle28">bleed</p>
+		</div>
+		<div id="g-ai0-80" class="g-lg g-aiAbs g-aiPointText" style="top:56.3178%;margin-top:-9.3px;left:5.7389%;width:61px;">
+			<p class="g-pstyle27">rebuke</p>
+		</div>
+		<div id="g-ai0-81" class="g-lg g-aiAbs g-aiPointText" style="top:56.6169%;margin-top:-9.3px;left:22.9625%;width:46px;">
+			<p class="g-pstyle27">heal</p>
+		</div>
+		<div id="g-ai0-82" class="g-lg g-aiAbs g-aiPointText" style="top:56.6169%;margin-top:-9.3px;left:22.9625%;width:46px;">
+			<p class="g-pstyle27">heal</p>
+		</div>
+		<div id="g-ai0-83" class="g-lg g-aiAbs g-aiPointText" style="top:57.0129%;margin-top:-9.6px;left:16.9224%;width:55px;">
+			<p class="g-pstyle28">bleed</p>
+		</div>
+		<div id="g-ai0-84" class="g-lg g-aiAbs g-aiPointText" style="top:57.0129%;margin-top:-9.6px;left:16.9224%;width:55px;">
+			<p class="g-pstyle28">bleed</p>
+		</div>
+		<div id="g-ai0-85" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:58.8435%;margin-top:-11.7px;left:61.29%;width:67px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai0-86" class="g-lg g-aiAbs g-aiPointText" style="top:58.8435%;margin-top:-11.7px;left:61.29%;width:67px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai0-87" class="g-lg g-aiAbs g-aiPointText" style="top:58.8435%;margin-top:-11.7px;left:61.29%;width:67px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai0-88" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:59.6081%;margin-top:-9.3px;left:31.1778%;width:58px;">
+			<p class="g-pstyle27">loveth</p>
+		</div>
+		<div id="g-ai0-89" class="g-lg g-aiAbs g-aiPointText" style="top:59.6081%;margin-top:-9.3px;left:31.1778%;width:58px;">
+			<p class="g-pstyle27">loveth</p>
+		</div>
+		<div id="g-ai0-90" class="g-lg g-aiAbs g-aiPointText" style="top:59.6081%;margin-top:-9.3px;left:31.1778%;width:58px;">
+			<p class="g-pstyle27">loveth</p>
+		</div>
+		<div id="g-ai0-91" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:62.1528%;margin-top:-15.8px;left:54.0701%;width:77px;">
+			<p class="g-pstyle29">alight</p>
+		</div>
+		<div id="g-ai0-92" class="g-lg g-aiAbs g-aiPointText" style="top:62.1528%;margin-top:-15.8px;left:54.1729%;width:77px;">
+			<p class="g-pstyle29">alight</p>
+		</div>
+		<div id="g-ai0-93" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:62.3972%;margin-top:-9.6px;left:46.9953%;width:78px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai0-94" class="g-lg g-aiAbs g-aiPointText" style="top:62.3972%;margin-top:-9.6px;left:46.9953%;width:78px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai0-95" class="g-lg g-aiAbs g-aiPointText" style="top:62.3972%;margin-top:-9.6px;left:46.9953%;width:78px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai0-96" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:64.1308%;margin-top:-11.4px;left:61.678%;width:47px;">
+			<p class="g-pstyle30">feel</p>
+		</div>
+		<div id="g-ai0-97" class="g-lg g-aiAbs g-aiPointText" style="top:64.1308%;margin-top:-11.4px;left:61.678%;width:47px;">
+			<p class="g-pstyle30">feel</p>
+		</div>
+		<div id="g-ai0-98" class="g-lg g-aiAbs g-aiPointText" style="top:64.1308%;margin-top:-11.4px;left:61.678%;width:47px;">
+			<p class="g-pstyle30">feel</p>
+		</div>
+		<div id="g-ai0-99" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:65.2915%;margin-top:-9.3px;left:38.9544%;width:52px;">
+			<p class="g-pstyle27">shew</p>
+		</div>
+		<div id="g-ai0-100" class="g-lg g-aiAbs g-aiPointText" style="top:65.2915%;margin-top:-9.3px;left:38.9544%;width:52px;">
+			<p class="g-pstyle27">shew</p>
+		</div>
+		<div id="g-ai0-101" class="g-lg g-aiAbs g-aiPointText" style="top:65.2915%;margin-top:-9.3px;left:38.9544%;width:52px;">
+			<p class="g-pstyle27">shew</p>
+		</div>
+		<div id="g-ai0-102" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:66.488%;margin-top:-9.3px;left:34.0751%;width:58px;">
+			<p class="g-pstyle27">devise</p>
+		</div>
+		<div id="g-ai0-103" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:68.0025%;margin-top:-13.3px;left:50.4314%;width:59px;">
+			<p class="g-pstyle16">look</p>
+		</div>
+		<div id="g-ai0-104" class="g-lg g-aiAbs g-aiPointText" style="top:66.488%;margin-top:-9.3px;left:34.0751%;width:58px;">
+			<p class="g-pstyle27">devise</p>
+		</div>
+		<div id="g-ai0-105" class="g-lg g-aiAbs g-aiPointText" style="top:68.0025%;margin-top:-13.3px;left:50.4314%;width:59px;">
+			<p class="g-pstyle16">look</p>
+		</div>
+		<div id="g-ai0-106" class="g-lg g-aiAbs g-aiPointText" style="top:68.0025%;margin-top:-13.3px;left:50.4314%;width:59px;">
+			<p class="g-pstyle16">look</p>
+		</div>
+		<div id="g-ai0-107" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:69.5951%;margin-top:-13.7px;left:61.7108%;width:65px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai0-108" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:69.0114%;margin-top:-9.7px;left:55.8789%;width:53px;">
+			<p class="g-pstyle5">seem</p>
+		</div>
+		<div id="g-ai0-109" class="g-lg g-aiAbs g-aiPointText" style="top:69.5951%;margin-top:-13.7px;left:61.7108%;width:65px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai0-110" class="g-lg g-aiAbs g-aiPointText" style="top:69.5951%;margin-top:-13.7px;left:61.7108%;width:65px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai0-111" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:69.9111%;margin-top:-11.7px;left:39.502%;width:65px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai0-112" class="g-lg g-aiAbs g-aiPointText" style="top:68.7757%;margin-top:-9.9px;left:55.8106%;width:53px;">
+			<p class="g-pstyle31">seem</p>
+		</div>
+		<div id="g-ai0-113" class="g-lg g-aiAbs g-aiPointText" style="top:69.9111%;margin-top:-11.7px;left:39.502%;width:65px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai0-114" class="g-lg g-aiAbs g-aiPointText" style="top:69.9111%;margin-top:-11.7px;left:39.502%;width:65px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai0-115" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:72.323%;margin-top:-15.8px;left:35.7242%;width:52px;">
+			<p class="g-pstyle10">cry</p>
+		</div>
+		<div id="g-ai0-116" class="g-lg g-aiAbs g-aiPointText" style="top:72.323%;margin-top:-15.8px;left:35.7242%;width:52px;">
+			<p class="g-pstyle10">cry</p>
+		</div>
+		<div id="g-ai0-117" class="g-lg g-aiAbs g-aiPointText" style="top:72.323%;margin-top:-15.8px;left:35.7242%;width:52px;">
+			<p class="g-pstyle10">cry</p>
+		</div>
+		<div id="g-ai0-118" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:73.6859%;margin-top:-13.3px;left:51.3512%;width:48px;">
+			<p class="g-pstyle16">gat</p>
+		</div>
+		<div id="g-ai0-119" class="g-lg g-aiAbs g-aiPointText" style="top:73.6859%;margin-top:-13.3px;left:51.3512%;width:48px;">
+			<p class="g-pstyle16">gat</p>
+		</div>
+		<div id="g-ai0-120" class="g-lg g-aiAbs g-aiPointText" style="top:73.6859%;margin-top:-13.3px;left:51.3512%;width:48px;">
+			<p class="g-pstyle16">gat</p>
+		</div>
+		<div id="g-ai0-121" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:74.0546%;margin-top:-10.6px;left:54.852%;width:52px;">
+			<p class="g-pstyle14">bear</p>
+		</div>
+		<div id="g-ai0-122" class="g-lg g-aiAbs g-aiPointText" style="top:74.0546%;margin-top:-10.6px;left:54.852%;width:52px;">
+			<p class="g-pstyle14">bear</p>
+		</div>
+		<div id="g-ai0-123" class="g-lg g-aiAbs g-aiPointText" style="top:74.0546%;margin-top:-10.6px;left:54.852%;width:52px;">
+			<p class="g-pstyle14">bear</p>
+		</div>
+		<div id="g-ai0-124" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:79.0091%;margin-top:-15.1px;left:35.4564%;width:62px;">
+			<p class="g-pstyle32">pray</p>
+		</div>
+		<div id="g-ai0-125" class="g-lg g-aiAbs g-aiPointText" style="top:79.0091%;margin-top:-15.1px;left:35.4564%;width:62px;">
+			<p class="g-pstyle32">pray</p>
+		</div>
+		<div id="g-ai0-126" class="g-lg g-aiAbs g-aiPointText" style="top:79.0091%;margin-top:-15.1px;left:35.4564%;width:62px;">
+			<p class="g-pstyle32">pray</p>
+		</div>
+		<div id="g-ai0-127" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:79.1313%;margin-top:-11.5px;left:53.4163%;width:59px;">
+			<p class="g-pstyle12">leapt</p>
+		</div>
+		<div id="g-ai0-128" class="g-lg g-aiAbs g-aiPointText" style="top:79.1313%;margin-top:-11.5px;left:53.4163%;width:59px;">
+			<p class="g-pstyle12">leapt</p>
+		</div>
+		<div id="g-ai0-129" class="g-lg g-aiAbs g-aiPointText" style="top:79.1313%;margin-top:-11.5px;left:53.4163%;width:59px;">
+			<p class="g-pstyle12">leapt</p>
+		</div>
+		<div id="g-ai0-130" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:82.4386%;margin-top:-9.6px;left:50.5713%;width:45px;">
+			<p class="g-pstyle5">fare</p>
+		</div>
+		<div id="g-ai0-131" class="g-lg g-aiAbs g-aiPointText" style="top:82.4386%;margin-top:-9.6px;left:50.6003%;width:45px;">
+			<p class="g-pstyle5">fare</p>
+		</div>
+		<div id="g-ai0-132" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:85.7289%;margin-top:-9.6px;left:34.0751%;width:48px;">
+			<p class="g-pstyle28">help</p>
+		</div>
+		<div id="g-ai0-133" class="g-lg g-aiAbs g-aiPointText" style="top:85.7289%;margin-top:-9.6px;left:34.0751%;width:48px;">
+			<p class="g-pstyle28">help</p>
+		</div>
+		<div id="g-ai0-134" class="g-lg g-aiAbs g-aiPointText" style="top:85.7289%;margin-top:-9.6px;left:34.0751%;width:48px;">
+			<p class="g-pstyle28">help</p>
+		</div>
+	</div>
+
+	<!-- Artboard: xs -->
+	<div id="g-practice-xs" class="g-artboard" style="max-width: 330px;max-height: 1347px" data-aspect-ratio="0.245" data-min-width="0" data-max-width="509">
+<div style="padding: 0 0 408.1535% 0;"></div>
+		<img id="g-practice-xs-img" class="g-practice-xs-img g-aiImg" alt="" src="ai2html/images/practice-xs.png"/>
+		<div id="g-ai1-1" class="g-lg g-aiAbs" style="top:1.2622%;left:63.8249%;width:15.4545%;">
+			<p class="g-pstyle0">12x </p>
+			<p class="g-pstyle1">more likely to be used for women</p>
+		</div>
+		<div id="g-ai1-2" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:2.6844%;margin-top:-6.2px;left:47.1859%;width:48px;">
+			<p class="g-pstyle2">rebuke</p>
+		</div>
+		<div id="g-ai1-3" class="g-lg g-aiAbs g-aiPointText" style="top:2.6101%;margin-top:-6.2px;left:47.1856%;width:48px;">
+			<p class="g-pstyle2">rebuke</p>
+		</div>
+		<div id="g-ai1-4" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 57.9859621758627%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 57.9859621758627%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 57.9859621758627%;top:7.4438%;margin-top:-6.3px;left:50.3905%;margin-left:-22px;width:44px;">
+			<p class="g-pstyle3">bleed</p>
+		</div>
+		<div id="g-ai1-5" class="g-lg g-aiAbs g-aiPointText" style="top:7.4504%;margin-top:-6.4px;left:47.0687%;width:44px;">
+			<p class="g-pstyle2">bleed</p>
+		</div>
+		<div id="g-ai1-6" class="g-lg g-aiAbs" style="top:8.0926%;left:88.9605%;width:9.3939%;">
+			<p class="g-pstyle4">8x </p>
+		</div>
+		<div id="g-ai1-7" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:9.9573%;margin-top:-6.1px;left:48.1254%;width:38px;">
+			<p class="g-pstyle2">heal</p>
+		</div>
+		<div id="g-ai1-8" class="g-lg g-aiAbs g-aiPointText" style="top:9.9573%;margin-top:-6.1px;left:48.1253%;width:38px;">
+			<p class="g-pstyle2">heal</p>
+		</div>
+		<div id="g-ai1-9" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:12.5321%;margin-top:-6.8px;left:47.7535%;width:50px;">
+			<p class="g-pstyle5">swoon</p>
+		</div>
+		<div id="g-ai1-10" class="g-lg g-aiAbs g-aiPointText" style="top:12.5321%;margin-top:-6.8px;left:47.7535%;width:50px;">
+			<p class="g-pstyle5">swoon</p>
+		</div>
+		<div id="g-ai1-11" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:13.8203%;margin-top:-6.1px;left:44.9171%;width:45px;">
+			<p class="g-pstyle2">loveth</p>
+		</div>
+		<div id="g-ai1-12" class="g-lg g-aiAbs g-aiPointText" style="top:13.8203%;margin-top:-6.1px;left:44.9171%;width:45px;">
+			<p class="g-pstyle2">loveth</p>
+		</div>
+		<div id="g-ai1-13" class="g-lg g-aiAbs" style="top:13.8094%;left:88.4843%;width:9.3939%;">
+			<p class="g-pstyle4">4x </p>
+		</div>
+		<div id="g-ai1-14" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.7337%;margin-top:-10.4px;left:60.8992%;width:49px;">
+			<p class="g-pstyle6">love</p>
+		</div>
+		<div id="g-ai1-15" class="g-lg g-aiAbs g-aiPointText" style="top:15.4336%;margin-top:-19.9px;left:60.8524%;width:50px;">
+			<p class="g-pstyle6">love</p>
+		</div>
+		<div id="g-ai1-16" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.997%;margin-top:-10px;left:53.8629%;width:41px;">
+			<p class="g-pstyle7">die</p>
+		</div>
+		<div id="g-ai1-17" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.7856%;margin-top:-6.1px;left:40.7419%;width:46px;">
+			<p class="g-pstyle2">devise</p>
+		</div>
+		<div id="g-ai1-18" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.8734%;margin-top:-6.3px;left:29.374%;width:39px;">
+			<p class="g-pstyle2">help</p>
+		</div>
+		<div id="g-ai1-19" class="g-lg g-aiAbs g-aiPointText" style="top:14.7432%;margin-top:-6.6px;left:40.3385%;width:48px;">
+			<p class="g-pstyle5">devise</p>
+		</div>
+		<div id="g-ai1-20" class="g-lg g-aiAbs g-aiPointText" style="top:14.997%;margin-top:-10px;left:53.8478%;width:41px;">
+			<p class="g-pstyle7">die</p>
+		</div>
+		<div id="g-ai1-21" class="g-lg g-aiAbs g-aiPointText" style="top:14.8734%;margin-top:-6.3px;left:29.3741%;width:39px;">
+			<p class="g-pstyle2">help</p>
+		</div>
+		<div id="g-ai1-22" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.9065%;margin-top:-15.2px;left:44.2797%;width:52px;">
+			<p class="g-pstyle8">tell</p>
+		</div>
+		<div id="g-ai1-23" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.7552%;margin-top:-10.2px;left:36.5135%;width:42px;">
+			<p class="g-pstyle7">cry</p>
+		</div>
+		<div id="g-ai1-24" class="g-lg g-aiAbs g-aiPointText" style="top:15.9065%;margin-top:-15.2px;left:44.2797%;width:52px;">
+			<p class="g-pstyle8">tell</p>
+		</div>
+		<div id="g-ai1-25" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.8003%;margin-top:-9.8px;left:27.4046%;width:49px;">
+			<p class="g-pstyle7">pray</p>
+		</div>
+		<div id="g-ai1-26" class="g-lg g-aiAbs g-aiPointText" style="top:15.7831%;margin-top:-10.6px;left:36.4845%;width:42px;">
+			<p class="g-pstyle6">cry</p>
+		</div>
+		<div id="g-ai1-27" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.7688%;margin-top:-7.4px;left:60.9033%;width:41px;">
+			<p class="g-pstyle9">lose</p>
+		</div>
+		<div id="g-ai1-28" class="g-lg g-aiAbs g-aiPointText" style="top:15.8003%;margin-top:-9.8px;left:27.4046%;width:49px;">
+			<p class="g-pstyle7">pray</p>
+		</div>
+		<div id="g-ai1-29" class="g-lg g-aiAbs g-aiPointText" style="top:15.7688%;margin-top:-7.4px;left:60.9027%;width:41px;">
+			<p class="g-pstyle9">lose</p>
+		</div>
+		<div id="g-ai1-30" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 57.7265524786841%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 57.7265524786841%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 57.7265524786841%;top:16.6657%;margin-top:-6.5px;left:65.1964%;margin-left:-21.5px;width:43px;">
+			<p class="g-pstyle10">grant</p>
+		</div>
+		<div id="g-ai1-31" class="g-lg g-aiAbs g-aiPointText" style="top:16.6722%;margin-top:-6.6px;left:62.0178%;width:43px;">
+			<p class="g-pstyle5">grant</p>
+		</div>
+		<div id="g-ai1-32" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:17.1388%;margin-top:-7.8px;left:69.9188%;width:49px;">
+			<p class="g-pstyle11">weep</p>
+		</div>
+		<div id="g-ai1-33" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:17.1601%;margin-top:-6.1px;left:41.7935%;width:42px;">
+			<p class="g-pstyle2">shew</p>
+		</div>
+		<div id="g-ai1-34" class="g-lg g-aiAbs g-aiPointText" style="top:17.1388%;margin-top:-7.8px;left:69.9186%;width:49px;">
+			<p class="g-pstyle11">weep</p>
+		</div>
+		<div id="g-ai1-35" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:17.5727%;margin-top:-11.7px;left:50.3677%;width:59px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai1-36" class="g-lg g-aiAbs g-aiPointText" style="top:17.1601%;margin-top:-6.1px;left:41.7933%;width:42px;">
+			<p class="g-pstyle2">shew</p>
+		</div>
+		<div id="g-ai1-37" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 56.8371502971222%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 56.8371502971222%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 56.8371502971222%;top:17.4706%;margin-top:-7.3px;left:35.7113%;margin-left:-25px;width:50px;">
+			<p class="g-pstyle13">desire</p>
+		</div>
+		<div id="g-ai1-38" class="g-lg g-aiAbs g-aiPointText" style="top:17.5835%;margin-top:-11.8px;left:50.31%;width:60px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai1-39" class="g-lg g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 56.8371502971222%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 56.8371502971222%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 56.8371502971222%;top:17.4706%;margin-top:-7.3px;left:35.7113%;margin-left:-25px;width:50px;">
+			<p class="g-pstyle13">desire</p>
+		</div>
+		<div id="g-ai1-40" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:18.4255%;margin-top:-12.2px;left:38.4058%;width:60px;">
+			<p class="g-pstyle14">send</p>
+		</div>
+		<div id="g-ai1-41" class="g-lg g-aiAbs g-aiPointText" style="top:18.4255%;margin-top:-12.2px;left:38.4055%;width:60px;">
+			<p class="g-pstyle14">send</p>
+		</div>
+		<div id="g-ai1-42" class="g-lg g-aiAbs" style="top:18.858%;left:86.8443%;margin-left:-8.6364%;width:17.2727%;">
+			<p class="g-pstyle15">50/50 split</p>
+		</div>
+		<div id="g-ai1-43" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.0221%;margin-top:-6.1px;left:44.9174%;width:46px;">
+			<p class="g-pstyle16">abode</p>
+		</div>
+		<div id="g-ai1-44" class="g-lg g-aiAbs g-aiPointText" style="top:21.0221%;margin-top:-6.1px;left:44.9176%;width:46px;">
+			<p class="g-pstyle16">abode</p>
+		</div>
+		<div id="g-ai1-45" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.3386%;margin-top:-6.4px;left:32.5368%;width:59px;">
+			<p class="g-pstyle16">withdraw</p>
+		</div>
+		<div id="g-ai1-46" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.3927%;margin-top:-6.1px;left:53.2221%;width:44px;">
+			<p class="g-pstyle16">dread</p>
+		</div>
+		<div id="g-ai1-47" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.4897%;margin-top:-7.4px;left:60.9026%;width:55px;">
+			<p class="g-pstyle17">escape</p>
+		</div>
+		<div id="g-ai1-48" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.4839%;margin-top:-6.4px;left:18.4242%;width:48px;">
+			<p class="g-pstyle16">proffer</p>
+		</div>
+		<div id="g-ai1-49" class="g-lg g-aiAbs g-aiPointText" style="top:21.3386%;margin-top:-6.4px;left:32.5367%;width:59px;">
+			<p class="g-pstyle16">withdraw</p>
+		</div>
+		<div id="g-ai1-50" class="g-lg g-aiAbs g-aiPointText" style="top:21.3184%;margin-top:-6.1px;left:53.2221%;width:44px;">
+			<p class="g-pstyle16">dread</p>
+		</div>
+		<div id="g-ai1-51" class="g-lg g-aiAbs g-aiPointText" style="top:21.4897%;margin-top:-7.4px;left:61.05%;width:55px;">
+			<p class="g-pstyle17">escape</p>
+		</div>
+		<div id="g-ai1-52" class="g-lg g-aiAbs g-aiPointText" style="top:21.4839%;margin-top:-6.4px;left:18.4242%;width:48px;">
+			<p class="g-pstyle16">proffer</p>
+		</div>
+		<div id="g-ai1-53" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 58.2640626260996%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 58.2640626260996%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 58.2640626260996%;top:21.7573%;margin-top:-6.1px;left:29.0751%;margin-left:-17px;width:34px;">
+			<p class="g-pstyle18">eat</p>
+		</div>
+		<div id="g-ai1-54" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:22.2367%;margin-top:-11.5px;left:45.9047%;width:51px;">
+			<p class="g-pstyle19">slay</p>
+		</div>
+		<div id="g-ai1-55" class="g-lg g-aiAbs g-aiPointText" style="top:21.7608%;margin-top:-6.1px;left:27.259%;width:34px;">
+			<p class="g-pstyle16">eat</p>
+		</div>
+		<div id="g-ai1-56" class="g-lg g-aiAbs g-aiPointText" style="top:22.2367%;margin-top:-11.5px;left:45.9047%;width:51px;">
+			<p class="g-pstyle19">slay</p>
+		</div>
+		<div id="g-ai1-57" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:22.3427%;margin-top:-8.9px;left:55.6044%;width:39px;">
+			<p class="g-pstyle20">gat</p>
+		</div>
+		<div id="g-ai1-58" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 55.6400088125138%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 55.6400088125138%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 55.6400088125138%;top:22.5602%;margin-top:-8.9px;left:40.9897%;margin-left:-23px;width:46px;">
+			<p class="g-pstyle21">look</p>
+		</div>
+		<div id="g-ai1-59" class="g-lg g-aiAbs g-aiPointText" style="top:22.3427%;margin-top:-8.9px;left:55.6044%;width:39px;">
+			<p class="g-pstyle20">gat</p>
+		</div>
+		<div id="g-ai1-60" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:22.4456%;margin-top:-6.3px;left:31.4728%;width:37px;">
+			<p class="g-pstyle16">fare</p>
+		</div>
+		<div id="g-ai1-61" class="g-lg g-aiAbs g-aiPointText" style="top:22.5674%;margin-top:-9px;left:37.3463%;width:46px;">
+			<p class="g-pstyle20">look</p>
+		</div>
+		<div id="g-ai1-62" class="g-lg g-aiAbs g-aiPointText" style="top:22.4456%;margin-top:-6.3px;left:31.4727%;width:37px;">
+			<p class="g-pstyle16">fare</p>
+		</div>
+		<div id="g-ai1-63" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:23.5627%;margin-top:-6.4px;left:49.4762%;width:48px;">
+			<p class="g-pstyle16">mount</p>
+		</div>
+		<div id="g-ai1-64" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:23.7302%;margin-top:-7.6px;left:27.4223%;width:46px;">
+			<p class="g-pstyle22">leapt</p>
+		</div>
+		<div id="g-ai1-65" class="g-lg g-aiAbs g-aiPointText" style="top:23.5627%;margin-top:-6.4px;left:49.4762%;width:48px;">
+			<p class="g-pstyle16">mount</p>
+		</div>
+		<div id="g-ai1-66" class="g-lg g-aiAbs g-aiPointText" style="top:23.7301%;margin-top:-7.6px;left:27.6381%;width:46px;">
+			<p class="g-pstyle22">leapt</p>
+		</div>
+		<div id="g-ai1-67" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:24.1644%;margin-top:-7.5px;left:36.1994%;width:42px;">
+			<p class="g-pstyle23">bear</p>
+		</div>
+		<div id="g-ai1-68" class="g-lg g-aiAbs g-aiPointText" style="top:24.1645%;margin-top:-7.5px;left:36.1993%;width:42px;">
+			<p class="g-pstyle23">bear</p>
+		</div>
+		<div id="g-ai1-69" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:24.6696%;margin-top:-10.3px;left:42.7095%;width:58px;">
+			<p class="g-pstyle24">alight</p>
+		</div>
+		<div id="g-ai1-70" class="g-lg g-aiAbs g-aiPointText" style="top:24.6696%;margin-top:-10.3px;left:42.7095%;width:58px;">
+			<p class="g-pstyle24">alight</p>
+		</div>
+		<div id="g-ai1-71" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:24.9103%;margin-top:-7.5px;left:55.1262%;width:53px;">
+			<p class="g-pstyle23">endure</p>
+		</div>
+		<div id="g-ai1-72" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:24.9769%;margin-top:-6.4px;left:30.3422%;width:42px;">
+			<p class="g-pstyle16">seem</p>
+		</div>
+		<div id="g-ai1-73" class="g-lg g-aiAbs" style="top:24.3521%;left:74.2718%;width:21.5152%;">
+			<p class="g-pstyle25"><span class="g-cstyle0">4x </span>more likely to be used for men</p>
+		</div>
+		<div id="g-ai1-74" class="g-lg g-aiAbs g-aiPointText" style="top:24.9103%;margin-top:-7.5px;left:55.1259%;width:53px;">
+			<p class="g-pstyle23">endure</p>
+		</div>
+		<div id="g-ai1-75" class="g-lg g-aiAbs g-aiPointText" style="top:24.913%;margin-top:-6.6px;left:30.3421%;width:43px;">
+			<p class="g-pstyle26">seem</p>
+		</div>
+		<div id="g-ai1-76" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 56.763987053306%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 56.763987053306%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 56.763987053306%;top:25.9403%;margin-top:-7.4px;left:51.0995%;margin-left:-21.5px;width:43px;">
+			<p class="g-pstyle27">yield</p>
+		</div>
+		<div id="g-ai1-77" class="g-lg g-aiAbs g-aiPointText" style="top:25.8724%;margin-top:-7.5px;left:47.9316%;width:43px;">
+			<p class="g-pstyle23">yield</p>
+		</div>
+		<div id="g-ai1-78" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:26.4437%;margin-top:-9.2px;left:58.6121%;width:46px;">
+			<p class="g-pstyle20">turn</p>
+		</div>
+		<div id="g-ai1-79" class="g-lg g-aiAbs g-aiPointText" style="top:26.4437%;margin-top:-9.2px;left:58.612%;width:46px;">
+			<p class="g-pstyle20">turn</p>
+		</div>
+		<div id="g-ai1-80" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:26.8308%;margin-top:-7.4px;left:52.087%;width:40px;">
+			<p class="g-pstyle17">pull</p>
+		</div>
+		<div id="g-ai1-81" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:26.889%;margin-top:-7.2px;left:35.5296%;width:38px;">
+			<p class="g-pstyle17">feel</p>
+		</div>
+		<div id="g-ai1-82" class="g-lg g-aiAbs g-aiPointText" style="top:26.8308%;margin-top:-7.4px;left:52.087%;width:40px;">
+			<p class="g-pstyle17">pull</p>
+		</div>
+		<div id="g-ai1-83" class="g-lg g-aiAbs g-aiPointText" style="top:26.889%;margin-top:-7.2px;left:35.5296%;width:38px;">
+			<p class="g-pstyle17">feel</p>
+		</div>
+		<div id="g-ai1-84" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 55.5092268790015%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 55.5092268790015%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 55.5092268790015%;top:27.3275%;margin-top:-9.1px;left:30.2712%;margin-left:-25px;width:50px;">
+			<p class="g-pstyle21">draw</p>
+		</div>
+		<div id="g-ai1-85" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:27.3542%;margin-top:-7.4px;left:41.7259%;width:52px;">
+			<p class="g-pstyle17">awake</p>
+		</div>
+		<div id="g-ai1-86" class="g-lg g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 55.5092268790015%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 55.5092268790015%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 55.5092268790015%;top:27.3275%;margin-top:-9.1px;left:30.2724%;margin-left:-25px;width:50px;">
+			<p class="g-pstyle21">draw</p>
+		</div>
+		<div id="g-ai1-87" class="g-lg g-aiAbs g-aiPointText" style="top:27.3542%;margin-top:-7.4px;left:41.8402%;width:52px;">
+			<p class="g-pstyle17">awake</p>
+		</div>
+		<div id="g-ai1-88" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:27.9637%;margin-top:-7.6px;left:53.8657%;width:52px;">
+			<p class="g-pstyle22">follow</p>
+		</div>
+		<div id="g-ai1-89" class="g-lg g-aiAbs g-aiPointText" style="top:27.9637%;margin-top:-7.6px;left:53.8657%;width:52px;">
+			<p class="g-pstyle22">follow</p>
+		</div>
+		<div id="g-ai1-90" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:29.0183%;margin-top:-6.8px;left:45.6589%;width:55px;">
+			<p class="g-pstyle26">marvel</p>
+		</div>
+		<div id="g-ai1-91" class="g-lg g-aiAbs g-aiPointText" style="top:28.946%;margin-top:-7.9px;left:45.386%;width:57px;">
+			<p class="g-pstyle22">marvel</p>
+		</div>
+		<div id="g-ai1-92" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:30.3831%;margin-top:-8.2px;left:52.2832%;width:41px;">
+			<p class="g-pstyle28">win</p>
+		</div>
+		<div id="g-ai1-93" class="g-lg g-aiAbs g-aiPointText" style="top:30.3831%;margin-top:-8.2px;left:52.2832%;width:41px;">
+			<p class="g-pstyle28">win</p>
+		</div>
+		<div id="g-ai1-94" class="g-lg g-aiAbs" style="top:31.1083%;left:89.0082%;width:5.7576%;">
+			<p class="g-pstyle29">8x</p>
+		</div>
+		<div id="g-ai1-95" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:32.6662%;margin-top:-9px;left:50.3131%;width:51px;">
+			<p class="g-pstyle20">dress</p>
+		</div>
+		<div id="g-ai1-96" class="g-lg g-aiAbs g-aiPointText" style="top:32.6662%;margin-top:-9px;left:50.3131%;width:51px;">
+			<p class="g-pstyle20">dress</p>
+		</div>
+		<div id="g-ai1-97" class="g-lg g-aiAbs" style="top:36.6766%;left:88.2126%;width:7.2727%;">
+			<p class="g-pstyle29">12x</p>
+		</div>
+		<div id="g-ai1-98" class="g-brown-text-shadow g-aiAbs g-aiPointText" style="top:38.5911%;margin-top:-13.8px;left:8.1595%;width:153px;">
+			<p class="g-pstyle30">Keep scrolling...</p>
+		</div>
+		<div id="g-ai1-99" class="g-lg g-aiAbs" style="top:37.8645%;left:27.7423%;margin-left:-23.6364%;width:47.2727%;">
+			<p class="g-pstyle31">Keep scrolling...</p>
+		</div>
+		<div id="g-ai1-100" class="g-lg g-aiAbs" style="top:42.3934%;left:88.2126%;width:7.2727%;">
+			<p class="g-pstyle29">16x</p>
+		</div>
+		<div id="g-ai1-101" class="g-lg g-aiAbs" style="top:48.333%;left:88.6949%;width:7.2727%;">
+			<p class="g-pstyle29">20x</p>
+		</div>
+		<div id="g-ai1-102" class="g-lg g-aiAbs" style="top:53.9755%;left:88.9196%;width:7.2727%;">
+			<p class="g-pstyle29">24x</p>
+		</div>
+		<div id="g-ai1-103" class="g-brown-text-shadow g-aiAbs g-aiPointText" style="top:58.7074%;margin-top:-13.7px;left:54.3448%;width:140px;">
+			<p class="g-pstyle30">There is more!</p>
+		</div>
+		<div id="g-ai1-104" class="g-lg g-aiAbs" style="top:57.9847%;left:72.0909%;margin-left:-23.6364%;width:47.2727%;">
+			<p class="g-pstyle31">There is more!</p>
+		</div>
+		<div id="g-ai1-105" class="g-lg g-aiAbs" style="top:59.6923%;left:88.9196%;width:7.2727%;">
+			<p class="g-pstyle29">28x</p>
+		</div>
+		<div id="g-ai1-106" class="g-lg g-aiAbs" style="top:65.4834%;left:88.9196%;width:7.2727%;">
+			<p class="g-pstyle29">32x</p>
+		</div>
+		<div id="g-ai1-107" class="g-lg g-aiAbs" style="top:71.3487%;left:89.5899%;width:7.2727%;">
+			<p class="g-pstyle29">36x</p>
+		</div>
+		<div id="g-ai1-108" class="g-lg g-aiAbs" style="top:77.1397%;left:89.5899%;width:7.2727%;">
+			<p class="g-pstyle29">40x</p>
+		</div>
+		<div id="g-ai1-109" class="g-brown-text-shadow g-aiAbs g-aiPointText" style="top:79.0441%;margin-top:-13.7px;left:13.3878%;width:120px;">
+			<p class="g-pstyle30">Keep going!</p>
+		</div>
+		<div id="g-ai1-110" class="g-lg g-aiAbs" style="top:78.2534%;left:28.3487%;margin-left:-23.6364%;width:47.2727%;">
+			<p class="g-pstyle31">Keep going!</p>
+		</div>
+		<div id="g-ai1-111" class="g-lg g-aiAbs" style="top:83.005%;left:90.2816%;width:7.2727%;">
+			<p class="g-pstyle29">44x</p>
+		</div>
+		<div id="g-ai1-112" class="g-lg g-aiAbs" style="top:88.7961%;left:90.2816%;width:7.2727%;">
+			<p class="g-pstyle29">48x</p>
+		</div>
+		<div id="g-ai1-113" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:94.8656%;margin-top:-17.8px;left:41.7165%;width:84px;">
+			<p class="g-pstyle32">smite</p>
+		</div>
+		<div id="g-ai1-114" class="g-lg g-aiAbs g-aiPointText" style="top:94.8891%;margin-top:-18.1px;left:41.8312%;width:84px;">
+			<p class="g-pstyle33">smite</p>
+		</div>
+		<div id="g-ai1-115" class="g-lg g-aiAbs" style="top:94.6613%;left:90.2816%;width:7.2727%;">
+			<p class="g-pstyle29">52x</p>
+		</div>
+	</div>
+
+	<!-- Artboard: sm -->
+	<div id="g-practice-sm" class="g-artboard" style="width:510px; height:2083.32779369335px;" data-aspect-ratio="0.245" data-min-width="510" data-max-width="658">
+<div style=""></div>
+		<img id="g-practice-sm-img" class="g-practice-sm-img g-aiImg" alt="" src="ai2html/images/practice-sm.png"/>
+		<div id="g-ai2-1" class="g-lg g-aiAbs" style="top:1.296%;left:62.487%;width:15.4902%;">
+			<p class="g-pstyle0">12x </p>
+			<p class="g-pstyle1">more likely to be used for women</p>
+		</div>
+		<div id="g-ai2-2" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:2.8076%;margin-top:-9.5px;left:45.1433%;width:62px;">
+			<p class="g-pstyle2">rebuke</p>
+		</div>
+		<div id="g-ai2-3" class="g-lg g-aiAbs g-aiPointText" style="top:2.8076%;margin-top:-9.5px;left:45.1433%;width:62px;">
+			<p class="g-pstyle2">rebuke</p>
+		</div>
+		<div id="g-ai2-4" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 55.1790410681772%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 55.1790410681772%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 55.1790410681772%;top:7.5194%;margin-top:-9.7px;left:49.0034%;margin-left:-28px;width:56px;">
+			<p class="g-pstyle3">bleed</p>
+		</div>
+		<div id="g-ai2-5" class="g-lg g-aiAbs g-aiPointText" style="top:7.5261%;margin-top:-9.8px;left:45.6816%;width:56px;">
+			<p class="g-pstyle2">bleed</p>
+		</div>
+		<div id="g-ai2-6" class="g-lg g-aiAbs" style="top:8.16%;left:87.6962%;width:9.4118%;">
+			<p class="g-pstyle4">8x </p>
+		</div>
+		<div id="g-ai2-7" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:10.0046%;margin-top:-9.4px;left:46.7416%;width:47px;">
+			<p class="g-pstyle2">heal</p>
+		</div>
+		<div id="g-ai2-8" class="g-lg g-aiAbs g-aiPointText" style="top:10.0046%;margin-top:-9.4px;left:46.7413%;width:47px;">
+			<p class="g-pstyle2">heal</p>
+		</div>
+		<div id="g-ai2-9" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:12.5512%;margin-top:-10.5px;left:46.3692%;width:65px;">
+			<p class="g-pstyle5">swoon</p>
+		</div>
+		<div id="g-ai2-10" class="g-lg g-aiAbs g-aiPointText" style="top:12.5512%;margin-top:-10.5px;left:46.3692%;width:65px;">
+			<p class="g-pstyle5">swoon</p>
+		</div>
+		<div id="g-ai2-11" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:13.8949%;margin-top:-9.5px;left:43.524%;width:58px;">
+			<p class="g-pstyle2">loveth</p>
+		</div>
+		<div id="g-ai2-12" class="g-lg g-aiAbs g-aiPointText" style="top:13.8949%;margin-top:-9.5px;left:43.524%;width:58px;">
+			<p class="g-pstyle2">loveth</p>
+		</div>
+		<div id="g-ai2-13" class="g-lg g-aiAbs" style="top:13.92%;left:87.2186%;width:9.4118%;">
+			<p class="g-pstyle4">4x </p>
+		</div>
+		<div id="g-ai2-14" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.8019%;margin-top:-16.4px;left:59.5528%;width:64px;">
+			<p class="g-pstyle6">love</p>
+		</div>
+		<div id="g-ai2-15" class="g-lg g-aiAbs g-aiPointText" style="top:15.5033%;margin-top:-31px;left:59.5059%;width:65px;">
+			<p class="g-pstyle6">love</p>
+		</div>
+		<div id="g-ai2-16" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.0561%;margin-top:-15.7px;left:52.4957%;width:52px;">
+			<p class="g-pstyle7">die</p>
+		</div>
+		<div id="g-ai2-17" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.8551%;margin-top:-9.5px;left:39.3364%;width:59px;">
+			<p class="g-pstyle2">devise</p>
+		</div>
+		<div id="g-ai2-18" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:14.9167%;margin-top:-9.8px;left:27.935%;width:49px;">
+			<p class="g-pstyle2">help</p>
+		</div>
+		<div id="g-ai2-19" class="g-lg g-aiAbs g-aiPointText" style="top:14.839%;margin-top:-10.1px;left:38.932%;width:62px;">
+			<p class="g-pstyle8">devise</p>
+		</div>
+		<div id="g-ai2-20" class="g-lg g-aiAbs g-aiPointText" style="top:15.0561%;margin-top:-15.7px;left:52.4806%;width:52px;">
+			<p class="g-pstyle7">die</p>
+		</div>
+		<div id="g-ai2-21" class="g-lg g-aiAbs g-aiPointText" style="top:14.9166%;margin-top:-9.8px;left:27.9352%;width:49px;">
+			<p class="g-pstyle2">help</p>
+		</div>
+		<div id="g-ai2-22" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.9963%;margin-top:-23.3px;left:42.8842%;width:68px;">
+			<p class="g-pstyle9">tell</p>
+		</div>
+		<div id="g-ai2-23" class="g-lg g-aiAbs g-aiPointText" style="top:15.9963%;margin-top:-23.3px;left:42.8842%;width:68px;">
+			<p class="g-pstyle9">tell</p>
+		</div>
+		<div id="g-ai2-24" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.8879%;margin-top:-16px;left:35.0957%;width:53px;">
+			<p class="g-pstyle6">cry</p>
+		</div>
+		<div id="g-ai2-25" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.8827%;margin-top:-14.9px;left:25.96%;width:64px;">
+			<p class="g-pstyle10">pray</p>
+		</div>
+		<div id="g-ai2-26" class="g-lg g-aiAbs g-aiPointText" style="top:15.8679%;margin-top:-16.6px;left:35.0669%;width:53px;">
+			<p class="g-pstyle11">cry</p>
+		</div>
+		<div id="g-ai2-27" class="g-lg g-aiAbs g-aiPointText" style="top:15.8827%;margin-top:-14.9px;left:25.96%;width:64px;">
+			<p class="g-pstyle10">pray</p>
+		</div>
+		<div id="g-ai2-28" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:15.8835%;margin-top:-11.9px;left:59.5566%;width:52px;">
+			<p class="g-pstyle12">lose</p>
+		</div>
+		<div id="g-ai2-29" class="g-lg g-aiAbs g-aiPointText" style="top:15.8835%;margin-top:-11.9px;left:59.5561%;width:52px;">
+			<p class="g-pstyle12">lose</p>
+		</div>
+		<div id="g-ai2-30" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 55.0097847358121%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 55.0097847358121%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 55.0097847358121%;top:16.7511%;margin-top:-10px;left:63.9062%;margin-left:-27.5px;width:55px;">
+			<p class="g-pstyle13">grant</p>
+		</div>
+		<div id="g-ai2-31" class="g-lg g-aiAbs g-aiPointText" style="top:16.7576%;margin-top:-10.1px;left:60.6743%;width:55px;">
+			<p class="g-pstyle8">grant</p>
+		</div>
+		<div id="g-ai2-32" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:17.1892%;margin-top:-12.1px;left:68.5983%;width:64px;">
+			<p class="g-pstyle14">weep</p>
+		</div>
+		<div id="g-ai2-33" class="g-lg g-aiAbs g-aiPointText" style="top:17.1892%;margin-top:-12.1px;left:68.5983%;width:64px;">
+			<p class="g-pstyle14">weep</p>
+		</div>
+		<div id="g-ai2-34" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:17.2057%;margin-top:-9.5px;left:40.3917%;width:52px;">
+			<p class="g-pstyle2">shew</p>
+		</div>
+		<div id="g-ai2-35" class="g-lg g-aiAbs g-aiPointText" style="top:17.2057%;margin-top:-9.5px;left:40.3913%;width:52px;">
+			<p class="g-pstyle2">shew</p>
+		</div>
+		<div id="g-ai2-36" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 54.2426251242957%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 54.2426251242957%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 54.2426251242957%;top:17.5577%;margin-top:-11.8px;left:34.3498%;margin-left:-33px;width:66px;">
+			<p class="g-pstyle15">desire</p>
+		</div>
+		<div id="g-ai2-37" class="g-lg g-aiAbs g-aiPointText" style="top:17.6996%;margin-top:-17.7px;left:48.9326%;width:80px;">
+			<p class="g-pstyle16">bring</p>
+		</div>
+		<div id="g-ai2-38" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:17.8802%;margin-top:-17.5px;left:48.2448%;width:80px;">
+			<p class="g-pstyle16">bring</p>
+		</div>
+		<div id="g-ai2-39" class="g-lg g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 54.2426251242957%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 54.2426251242957%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 54.2426251242957%;top:17.5577%;margin-top:-11.8px;left:34.3498%;margin-left:-33px;width:66px;">
+			<p class="g-pstyle15">desire</p>
+		</div>
+		<div id="g-ai2-40" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:18.5063%;margin-top:-19.5px;left:36.9934%;width:80px;">
+			<p class="g-pstyle17">send</p>
+		</div>
+		<div id="g-ai2-41" class="g-lg g-aiAbs g-aiPointText" style="top:18.5063%;margin-top:-19.5px;left:36.9931%;width:80px;">
+			<p class="g-pstyle17">send</p>
+		</div>
+		<div id="g-ai2-42" class="g-lg g-aiAbs" style="top:18.9121%;left:85.6376%;margin-left:-8.7255%;width:17.451%;">
+			<p class="g-pstyle18">50/50 split</p>
+		</div>
+		<div id="g-ai2-43" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.095%;margin-top:-9.5px;left:43.5242%;width:59px;">
+			<p class="g-pstyle19">abode</p>
+		</div>
+		<div id="g-ai2-44" class="g-lg g-aiAbs g-aiPointText" style="top:21.095%;margin-top:-9.5px;left:43.5242%;width:59px;">
+			<p class="g-pstyle19">abode</p>
+		</div>
+		<div id="g-ai2-45" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.4026%;margin-top:-9.9px;left:31.1071%;width:79px;">
+			<p class="g-pstyle19">withdraw</p>
+		</div>
+		<div id="g-ai2-46" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.4784%;margin-top:-9.5px;left:51.8533%;width:56px;">
+			<p class="g-pstyle19">dread</p>
+		</div>
+		<div id="g-ai2-47" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.5997%;margin-top:-12px;left:59.5561%;width:73px;">
+			<p class="g-pstyle20">escape</p>
+		</div>
+		<div id="g-ai2-48" class="g-lg g-aiAbs g-aiPointText" style="top:21.4026%;margin-top:-9.9px;left:31.1071%;width:79px;">
+			<p class="g-pstyle19">withdraw</p>
+		</div>
+		<div id="g-ai2-49" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:21.5435%;margin-top:-9.8px;left:16.954%;width:63px;">
+			<p class="g-pstyle19">proffer</p>
+		</div>
+		<div id="g-ai2-50" class="g-lg g-aiAbs g-aiPointText" style="top:21.5996%;margin-top:-12px;left:59.7039%;width:73px;">
+			<p class="g-pstyle20">escape</p>
+		</div>
+		<div id="g-ai2-51" class="g-lg g-aiAbs g-aiPointText" style="top:21.5435%;margin-top:-9.8px;left:16.954%;width:63px;">
+			<p class="g-pstyle19">proffer</p>
+		</div>
+		<div id="g-ai2-52" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 55.3601340033501%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 55.3601340033501%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 55.3601340033501%;top:21.8558%;margin-top:-9.3px;left:27.5763%;margin-left:-20px;width:40px;">
+			<p class="g-pstyle21">eat</p>
+		</div>
+		<div id="g-ai2-53" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:22.2966%;margin-top:-18.5px;left:44.5143%;width:67px;">
+			<p class="g-pstyle22">slay</p>
+		</div>
+		<div id="g-ai2-54" class="g-lg g-aiAbs g-aiPointText" style="top:21.8593%;margin-top:-9.4px;left:25.8141%;width:40px;">
+			<p class="g-pstyle19">eat</p>
+		</div>
+		<div id="g-ai2-55" class="g-lg g-aiAbs g-aiPointText" style="top:22.3926%;margin-top:-18.5px;left:44.2633%;width:67px;">
+			<p class="g-pstyle22">slay</p>
+		</div>
+		<div id="g-ai2-56" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:22.4892%;margin-top:-13.5px;left:54.2424%;width:49px;">
+			<p class="g-pstyle23">gat</p>
+		</div>
+		<div id="g-ai2-57" class="g-lg g-aiAbs g-aiPointText" style="top:22.4892%;margin-top:-13.5px;left:54.2424%;width:49px;">
+			<p class="g-pstyle23">gat</p>
+		</div>
+		<div id="g-ai2-58" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 53.7268889212404%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 53.7268889212404%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 53.7268889212404%;top:22.676%;margin-top:-13.4px;left:39.5652%;margin-left:-29.5px;width:59px;">
+			<p class="g-pstyle24">look</p>
+		</div>
+		<div id="g-ai2-59" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:22.548%;margin-top:-9.7px;left:30.0403%;width:45px;">
+			<p class="g-pstyle19">fare</p>
+		</div>
+		<div id="g-ai2-60" class="g-lg g-aiAbs g-aiPointText" style="top:22.6352%;margin-top:-13.6px;left:35.9309%;width:59px;">
+			<p class="g-pstyle23">look</p>
+		</div>
+		<div id="g-ai2-61" class="g-lg g-aiAbs g-aiPointText" style="top:22.548%;margin-top:-9.7px;left:30.0403%;width:45px;">
+			<p class="g-pstyle19">fare</p>
+		</div>
+		<div id="g-ai2-62" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:23.6554%;margin-top:-9.8px;left:48.0964%;width:62px;">
+			<p class="g-pstyle19">mount</p>
+		</div>
+		<div id="g-ai2-63" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:23.7728%;margin-top:-12.3px;left:25.9776%;width:60px;">
+			<p class="g-pstyle25">leapt</p>
+		</div>
+		<div id="g-ai2-64" class="g-lg g-aiAbs g-aiPointText" style="top:23.6554%;margin-top:-9.8px;left:48.0964%;width:62px;">
+			<p class="g-pstyle19">mount</p>
+		</div>
+		<div id="g-ai2-65" class="g-lg g-aiAbs g-aiPointText" style="top:23.7728%;margin-top:-12.3px;left:26.194%;width:60px;">
+			<p class="g-pstyle25">leapt</p>
+		</div>
+		<div id="g-ai2-66" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:24.2764%;margin-top:-10.8px;left:34.7809%;width:53px;">
+			<p class="g-pstyle26">bear</p>
+		</div>
+		<div id="g-ai2-67" class="g-lg g-aiAbs g-aiPointText" style="top:24.2764%;margin-top:-10.8px;left:34.7807%;width:53px;">
+			<p class="g-pstyle26">bear</p>
+		</div>
+		<div id="g-ai2-68" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:24.773%;margin-top:-16.1px;left:41.3097%;width:78px;">
+			<p class="g-pstyle27">alight</p>
+		</div>
+		<div id="g-ai2-69" class="g-lg g-aiAbs g-aiPointText" style="top:24.773%;margin-top:-16.1px;left:41.3097%;width:78px;">
+			<p class="g-pstyle27">alight</p>
+		</div>
+		<div id="g-ai2-70" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:25.0479%;margin-top:-10.8px;left:53.7631%;width:70px;">
+			<p class="g-pstyle26">endure</p>
+		</div>
+		<div id="g-ai2-71" class="g-lg g-aiAbs" style="top:24.4321%;left:72.9645%;width:21.5686%;">
+			<p class="g-pstyle28"><span class="g-cstyle0">4x </span>more likely to be used for men</p>
+		</div>
+		<div id="g-ai2-72" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:25.051%;margin-top:-9.9px;left:28.9067%;width:53px;">
+			<p class="g-pstyle29">seem</p>
+		</div>
+		<div id="g-ai2-73" class="g-lg g-aiAbs g-aiPointText" style="top:25.0479%;margin-top:-10.8px;left:53.7629%;width:70px;">
+			<p class="g-pstyle26">endure</p>
+		</div>
+		<div id="g-ai2-74" class="g-lg g-aiAbs g-aiPointText" style="top:25.0614%;margin-top:-10.1px;left:28.9062%;width:54px;">
+			<p class="g-pstyle29">seem</p>
+		</div>
+		<div id="g-ai2-75" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 54.7026406429392%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 54.7026406429392%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 54.7026406429392%;top:25.9984%;margin-top:-10.6px;left:49.6704%;margin-left:-27px;width:54px;">
+			<p class="g-pstyle30">yield</p>
+		</div>
+		<div id="g-ai2-76" class="g-lg g-aiAbs g-aiPointText" style="top:26.0048%;margin-top:-10.8px;left:46.5471%;width:55px;">
+			<p class="g-pstyle26">yield</p>
+		</div>
+		<div id="g-ai2-77" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:26.5389%;margin-top:-13.9px;left:57.2588%;width:59px;">
+			<p class="g-pstyle31">turn</p>
+		</div>
+		<div id="g-ai2-78" class="g-lg g-aiAbs g-aiPointText" style="top:26.5389%;margin-top:-13.9px;left:57.2588%;width:59px;">
+			<p class="g-pstyle31">turn</p>
+		</div>
+		<div id="g-ai2-79" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:26.9712%;margin-top:-11.9px;left:50.7147%;width:50px;">
+			<p class="g-pstyle20">pull</p>
+		</div>
+		<div id="g-ai2-80" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:27.027%;margin-top:-11.1px;left:34.1089%;width:48px;">
+			<p class="g-pstyle32">feel</p>
+		</div>
+		<div id="g-ai2-81" class="g-lg g-aiAbs g-aiPointText" style="top:26.9712%;margin-top:-11.9px;left:50.7147%;width:50px;">
+			<p class="g-pstyle20">pull</p>
+		</div>
+		<div id="g-ai2-82" class="g-lg g-aiAbs g-aiPointText" style="top:27.0271%;margin-top:-11.1px;left:34.1089%;width:48px;">
+			<p class="g-pstyle32">feel</p>
+		</div>
+		<div id="g-ai2-83" class="g-red-text-shadow g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 53.6384309266629%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 53.6384309266629%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 53.6384309266629%;top:27.3957%;margin-top:-13.7px;left:28.7959%;margin-left:-32.5px;width:65px;">
+			<p class="g-pstyle33">draw</p>
+		</div>
+		<div id="g-ai2-84" class="g-lg g-aiAbs g-aiPointText" style="transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);transform-origin: 50% 53.6384309266629%;-webkit-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-webkit-transform-origin: 50% 53.6384309266629%;-ms-transform: matrix(0.9998,0.0203,-0.0203,0.9998,0,0);-ms-transform-origin: 50% 53.6384309266629%;top:27.3957%;margin-top:-13.7px;left:28.797%;margin-left:-32.5px;width:65px;">
+			<p class="g-pstyle33">draw</p>
+		</div>
+		<div id="g-ai2-85" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:27.4549%;margin-top:-12px;left:40.3235%;width:69px;">
+			<p class="g-pstyle20">awake</p>
+		</div>
+		<div id="g-ai2-86" class="g-lg g-aiAbs g-aiPointText" style="top:27.4549%;margin-top:-12px;left:40.4386%;width:69px;">
+			<p class="g-pstyle20">awake</p>
+		</div>
+		<div id="g-ai2-87" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:28.0465%;margin-top:-12.3px;left:52.4984%;width:68px;">
+			<p class="g-pstyle25">follow</p>
+		</div>
+		<div id="g-ai2-88" class="g-lg g-aiAbs g-aiPointText" style="top:28.0465%;margin-top:-12.3px;left:52.4984%;width:68px;">
+			<p class="g-pstyle25">follow</p>
+		</div>
+		<div id="g-ai2-89" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:29.1153%;margin-top:-10.6px;left:44.2679%;width:73px;">
+			<p class="g-pstyle26">marvel</p>
+		</div>
+		<div id="g-ai2-90" class="g-lg g-aiAbs g-aiPointText" style="top:29.0956%;margin-top:-12.2px;left:43.9944%;width:76px;">
+			<p class="g-pstyle34">marvel</p>
+		</div>
+		<div id="g-ai2-91" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:30.4422%;margin-top:-13.2px;left:50.9112%;width:52px;">
+			<p class="g-pstyle23">win</p>
+		</div>
+		<div id="g-ai2-92" class="g-lg g-aiAbs g-aiPointText" style="top:30.4422%;margin-top:-13.2px;left:50.9112%;width:52px;">
+			<p class="g-pstyle23">win</p>
+		</div>
+		<div id="g-ai2-93" class="g-lg g-aiAbs" style="top:31.2481%;left:87.744%;width:5.6863%;">
+			<p class="g-pstyle35">8x</p>
+		</div>
+		<div id="g-ai2-94" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:32.7648%;margin-top:-13.6px;left:48.9357%;width:67px;">
+			<p class="g-pstyle23">dress</p>
+		</div>
+		<div id="g-ai2-95" class="g-lg g-aiAbs g-aiPointText" style="top:32.7648%;margin-top:-13.6px;left:48.9357%;width:67px;">
+			<p class="g-pstyle23">dress</p>
+		</div>
+		<div id="g-ai2-96" class="g-lg g-aiAbs" style="top:36.8641%;left:86.9461%;width:7.2549%;">
+			<p class="g-pstyle35">12x</p>
+		</div>
+		<div id="g-ai2-97" class="g-brown-text-shadow g-aiAbs g-aiPointText" style="top:38.8364%;margin-top:-20.1px;left:6.7828%;width:212px;">
+			<p class="g-pstyle17">Keep scrolling...</p>
+		</div>
+		<div id="g-ai2-98" class="g-lg g-aiAbs" style="top:38.5441%;left:25.4097%;margin-left:-33.1373%;width:66.2745%;">
+			<p class="g-pstyle36">Keep scrolling...</p>
+		</div>
+		<div id="g-ai2-99" class="g-lg g-aiAbs" style="top:42.5281%;left:86.9461%;width:7.2549%;">
+			<p class="g-pstyle35">16x</p>
+		</div>
+		<div id="g-ai2-100" class="g-lg g-aiAbs" style="top:48.4801%;left:87.4298%;width:7.2549%;">
+			<p class="g-pstyle35">20x</p>
+		</div>
+		<div id="g-ai2-101" class="g-lg g-aiAbs" style="top:54.0961%;left:87.6552%;width:7.2549%;">
+			<p class="g-pstyle35">24x</p>
+		</div>
+		<div id="g-ai2-102" class="g-brown-text-shadow g-aiAbs g-aiPointText" style="top:59.2328%;margin-top:-20px;left:54.2388%;width:194px;">
+			<p class="g-pstyle17">There is more!</p>
+		</div>
+		<div id="g-ai2-103" class="g-lg g-aiAbs" style="top:58.9922%;left:71.1008%;margin-left:-33.1373%;width:66.2745%;">
+			<p class="g-pstyle36">There is more!</p>
+		</div>
+		<div id="g-ai2-104" class="g-lg g-aiAbs" style="top:59.7602%;left:-28.1062%;margin-left:-29.4118%;width:58.8235%;">
+			<p class="g-pstyle37">smite: to strike with a firm blow </p>
+		</div>
+		<div id="g-ai2-105" class="g-lg g-aiAbs" style="top:59.9042%;left:87.6552%;width:7.2549%;">
+			<p class="g-pstyle35">28x</p>
+		</div>
+		<div id="g-ai2-106" class="g-lg g-aiAbs" style="top:65.7122%;left:87.6552%;width:7.2549%;">
+			<p class="g-pstyle35">32x</p>
+		</div>
+		<div id="g-ai2-107" class="g-lg g-aiAbs" style="top:71.5202%;left:88.3273%;width:7.2549%;">
+			<p class="g-pstyle35">36x</p>
+		</div>
+		<div id="g-ai2-108" class="g-brown-text-shadow g-aiAbs g-aiPointText" style="top:76.3151%;margin-top:-19.9px;left:12.403%;width:164px;">
+			<p class="g-pstyle17">Keep going!</p>
+		</div>
+		<div id="g-ai2-109" class="g-lg g-aiAbs" style="top:76.0802%;left:26.4402%;margin-left:-33.1373%;width:66.2745%;">
+			<p class="g-pstyle36">Keep going!</p>
+		</div>
+		<div id="g-ai2-110" class="g-lg g-aiAbs" style="top:77.3762%;left:88.3273%;width:7.2549%;">
+			<p class="g-pstyle35">40x</p>
+		</div>
+		<div id="g-ai2-111" class="g-lg g-aiAbs" style="top:83.2802%;left:89.0211%;width:7.2549%;">
+			<p class="g-pstyle35">44x</p>
+		</div>
+		<div id="g-ai2-112" class="g-lg g-aiAbs" style="top:89.0882%;left:89.0211%;width:7.2549%;">
+			<p class="g-pstyle35">48x</p>
+		</div>
+		<div id="g-ai2-113" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:95.1429%;margin-top:-28.1px;left:40.3139%;width:119px;">
+			<p class="g-pstyle38">smite</p>
+		</div>
+		<div id="g-ai2-114" class="g-lg g-aiAbs g-aiPointText" style="top:95.1533%;margin-top:-27.4px;left:40.4292%;width:117px;">
+			<p class="g-pstyle39">smite</p>
+		</div>
+		<div id="g-ai2-115" class="g-lg g-aiAbs" style="top:94.8963%;left:89.0211%;width:7.2549%;">
+			<p class="g-pstyle35">52x</p>
+		</div>
+	</div>
+
+	<!-- Artboard: md -->
+	<div id="g-practice-md" class="g-artboard" style="width:660px; height:230.853037426346px;" data-aspect-ratio="2.859" data-min-width="660" data-max-width="929">
+<div style=""></div>
+		<img id="g-practice-md-img" class="g-practice-md-img g-aiImg" alt="" src="ai2html/images/practice-md.png"/>
+		<div id="g-ai3-1" class="g-lg g-aiAbs" style="top:5.6313%;right:40.3135%;width:6.2121%;">
+			<p class="g-pstyle0">4x<span class="g-cstyle0"> </span></p>
+			<p class="g-pstyle1">more likely to be used for men to use</p>
+		</div>
+		<div id="g-ai3-2" class="g-lg g-aiAbs" style="top:5.6313%;left:47.0507%;margin-left:-3.1818%;width:6.3636%;">
+			<p class="g-pstyle2">50/50 split</p>
+		</div>
+		<div id="g-ai3-3" class="g-lg g-aiAbs" style="top:8.6635%;right:7.8425%;width:6.2121%;">
+			<p class="g-pstyle0">52x </p>
+			<p class="g-pstyle1">more likely for men to use</p>
+		</div>
+		<div id="g-ai3-4" class="g-lg g-aiAbs" style="top:13.4285%;left:6.8923%;width:7.2727%;">
+			<p class="g-pstyle3">12x </p>
+			<p class="g-pstyle4">more likely to be used for women</p>
+		</div>
+		<div id="g-ai3-5" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:31.5341%;margin-top:-6.8px;left:48.4349%;width:51px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai3-6" class="g-lg g-aiAbs g-aiPointText" style="top:31.5341%;margin-top:-6.8px;left:48.4349%;width:51px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai3-7" class="g-lg g-aiAbs g-aiPointText" style="top:31.5341%;margin-top:-6.8px;left:48.4349%;width:51px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai3-8" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:33.9857%;margin-top:-8.5px;left:35.5878%;width:43px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai3-9" class="g-lg g-aiAbs g-aiPointText" style="top:33.9857%;margin-top:-8.5px;left:35.5878%;width:43px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai3-10" class="g-lg g-aiAbs g-aiPointText" style="top:33.9857%;margin-top:-8.5px;left:35.5878%;width:43px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai3-11" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:36.1514%;margin-top:-8.5px;left:47.7895%;width:58px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai3-12" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:36.7542%;margin-top:-9.8px;left:59.6386%;width:48px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai3-13" class="g-lg g-aiAbs g-aiPointText" style="top:36.1514%;margin-top:-8.5px;left:47.7895%;width:58px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai3-14" class="g-lg g-aiAbs g-aiPointText" style="top:36.1514%;margin-top:-8.5px;left:47.7895%;width:58px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai3-15" class="g-lg g-aiAbs g-aiPointText" style="top:36.7542%;margin-top:-9.8px;left:59.6386%;width:48px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai3-16" class="g-lg g-aiAbs g-aiPointText" style="top:36.7542%;margin-top:-9.8px;left:59.6386%;width:48px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai3-17" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:38.5184%;margin-top:-8.9px;left:38.3464%;width:52px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai3-18" class="g-lg g-aiAbs g-aiPointText" style="top:38.5184%;margin-top:-8.9px;left:38.3464%;width:52px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai3-19" class="g-lg g-aiAbs g-aiPointText" style="top:38.5184%;margin-top:-8.9px;left:38.3464%;width:52px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai3-20" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:42.7717%;margin-top:-11.7px;left:33.1619%;width:52px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai3-21" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:41.3969%;margin-top:-6.6px;left:48.3691%;width:46px;">
+			<p class="g-pstyle5">dread</p>
+		</div>
+		<div id="g-ai3-22" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:42.5331%;margin-top:-8.2px;left:62.4661%;width:55px;">
+			<p class="g-pstyle11">follow</p>
+		</div>
+		<div id="g-ai3-23" class="g-lg g-aiAbs g-aiPointText" style="top:47.272%;margin-top:-22.1px;left:33.1619%;width:52px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai3-24" class="g-lg g-aiAbs g-aiPointText" style="top:42.7717%;margin-top:-11.7px;left:33.1619%;width:52px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai3-25" class="g-lg g-aiAbs g-aiPointText" style="top:41.3969%;margin-top:-6.6px;left:48.3691%;width:46px;">
+			<p class="g-pstyle5">dread</p>
+		</div>
+		<div id="g-ai3-26" class="g-lg g-aiAbs g-aiPointText" style="top:41.3969%;margin-top:-6.6px;left:48.3691%;width:46px;">
+			<p class="g-pstyle5">dread</p>
+		</div>
+		<div id="g-ai3-27" class="g-lg g-aiAbs g-aiPointText" style="top:42.5331%;margin-top:-8.2px;left:62.4661%;width:55px;">
+			<p class="g-pstyle11">follow</p>
+		</div>
+		<div id="g-ai3-28" class="g-lg g-aiAbs g-aiPointText" style="top:42.5331%;margin-top:-8.2px;left:62.4661%;width:55px;">
+			<p class="g-pstyle11">follow</p>
+		</div>
+		<div id="g-ai3-29" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:45.7726%;margin-top:-12.7px;left:38.3464%;width:63px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai3-30" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:44.8308%;margin-top:-7.5px;left:55.6233%;width:56px;">
+			<p class="g-pstyle13">endure</p>
+		</div>
+		<div id="g-ai3-31" class="g-lg g-aiAbs g-aiPointText" style="top:45.7726%;margin-top:-12.7px;left:38.3464%;width:63px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai3-32" class="g-lg g-aiAbs g-aiPointText" style="top:45.7726%;margin-top:-12.7px;left:38.3464%;width:63px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai3-33" class="g-lg g-aiAbs g-aiPointText" style="top:44.8308%;margin-top:-7.5px;left:55.6233%;width:56px;">
+			<p class="g-pstyle13">endure</p>
+		</div>
+		<div id="g-ai3-34" class="g-lg g-aiAbs g-aiPointText" style="top:44.8308%;margin-top:-7.5px;left:55.6233%;width:56px;">
+			<p class="g-pstyle13">endure</p>
+		</div>
+		<div id="g-ai3-35" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:45.7286%;margin-top:-6.6px;left:50.1194%;width:35px;">
+			<p class="g-pstyle5">eat</p>
+		</div>
+		<div id="g-ai3-36" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:47.3826%;margin-top:-9.4px;left:68.7545%;width:43px;">
+			<p class="g-pstyle14">win</p>
+		</div>
+		<div id="g-ai3-37" class="g-lg g-aiAbs g-aiPointText" style="top:45.7286%;margin-top:-6.6px;left:50.1194%;width:35px;">
+			<p class="g-pstyle5">eat</p>
+		</div>
+		<div id="g-ai3-38" class="g-lg g-aiAbs g-aiPointText" style="top:45.7286%;margin-top:-6.6px;left:50.1194%;width:35px;">
+			<p class="g-pstyle5">eat</p>
+		</div>
+		<div id="g-ai3-39" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:48.3495%;margin-top:-9.6px;left:73.221%;width:54px;">
+			<p class="g-pstyle14">dress</p>
+		</div>
+		<div id="g-ai3-40" class="g-lg g-aiAbs g-aiPointText" style="top:47.3826%;margin-top:-9.4px;left:68.7545%;width:43px;">
+			<p class="g-pstyle14">win</p>
+		</div>
+		<div id="g-ai3-41" class="g-lg g-aiAbs g-aiPointText" style="top:47.3826%;margin-top:-9.4px;left:68.7545%;width:43px;">
+			<p class="g-pstyle14">win</p>
+		</div>
+		<div id="g-ai3-42" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:48.2803%;margin-top:-8.5px;left:61.0503%;width:42px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai3-43" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:49.9347%;margin-top:-11.3px;left:34.2582%;width:43px;">
+			<p class="g-pstyle15">die</p>
+		</div>
+		<div id="g-ai3-44" class="g-lg g-aiAbs g-aiPointText" style="top:48.3495%;margin-top:-9.6px;left:73.221%;width:54px;">
+			<p class="g-pstyle14">dress</p>
+		</div>
+		<div id="g-ai3-45" class="g-lg g-aiAbs g-aiPointText" style="top:48.3495%;margin-top:-9.6px;left:73.221%;width:54px;">
+			<p class="g-pstyle14">dress</p>
+		</div>
+		<div id="g-ai3-46" class="g-lg g-aiAbs g-aiPointText" style="top:48.2803%;margin-top:-8.5px;left:61.0503%;width:42px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai3-47" class="g-lg g-aiAbs g-aiPointText" style="top:48.2803%;margin-top:-8.5px;left:61.0503%;width:42px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai3-48" class="g-lg g-aiAbs g-aiPointText" style="top:49.9347%;margin-top:-11.3px;left:34.2582%;width:43px;">
+			<p class="g-pstyle15">die</p>
+		</div>
+		<div id="g-ai3-49" class="g-lg g-aiAbs g-aiPointText" style="top:49.9347%;margin-top:-11.3px;left:34.2582%;width:43px;">
+			<p class="g-pstyle15">die</p>
+		</div>
+		<div id="g-ai3-50" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:54.3746%;margin-top:-19.5px;left:87.8786%;width:91px;">
+			<p class="g-pstyle16">smite</p>
+		</div>
+		<div id="g-ai3-51" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:50.0602%;margin-top:-6.6px;left:47.7895%;width:48px;">
+			<p class="g-pstyle5">abode</p>
+		</div>
+		<div id="g-ai3-52" class="g-lg g-aiAbs g-aiPointText" style="top:54.2891%;margin-top:-19.3px;left:88.0098%;width:90px;">
+			<p class="g-pstyle16">smite</p>
+		</div>
+		<div id="g-ai3-53" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:51.027%;margin-top:-6.8px;left:52.9872%;width:51px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai3-54" class="g-lg g-aiAbs g-aiPointText" style="top:50.0602%;margin-top:-6.6px;left:47.7895%;width:48px;">
+			<p class="g-pstyle5">abode</p>
+		</div>
+		<div id="g-ai3-55" class="g-lg g-aiAbs g-aiPointText" style="top:50.0602%;margin-top:-6.6px;left:47.7895%;width:48px;">
+			<p class="g-pstyle5">abode</p>
+		</div>
+		<div id="g-ai3-56" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:51.5606%;margin-top:-7px;left:37.8046%;width:45px;">
+			<p class="g-pstyle17">grant</p>
+		</div>
+		<div id="g-ai3-57" class="g-lg g-aiAbs g-aiPointText" style="top:51.027%;margin-top:-6.8px;left:52.9872%;width:51px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai3-58" class="g-lg g-aiAbs g-aiPointText" style="top:51.027%;margin-top:-6.8px;left:52.9872%;width:51px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai3-59" class="g-lg g-aiAbs g-aiPointText" style="top:51.5606%;margin-top:-7px;left:37.8046%;width:45px;">
+			<p class="g-pstyle17">grant</p>
+		</div>
+		<div id="g-ai3-60" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:52.9761%;margin-top:-7.3px;left:64.6234%;width:58px;">
+			<p class="g-pstyle18">marvel</p>
+		</div>
+		<div id="g-ai3-61" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:55.7044%;margin-top:-13.6px;left:40.6887%;width:63px;">
+			<p class="g-pstyle19">send</p>
+		</div>
+		<div id="g-ai3-62" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:53.827%;margin-top:-7.3px;left:27.9185%;width:53px;">
+			<p class="g-pstyle17">swoon</p>
+		</div>
+		<div id="g-ai3-63" class="g-lg g-aiAbs g-aiPointText" style="top:52.7922%;margin-top:-7.9px;left:64.5692%;width:55px;">
+			<p class="g-pstyle20">marvel</p>
+		</div>
+		<div id="g-ai3-64" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:55.8361%;margin-top:-12.9px;left:49.7909%;width:54px;">
+			<p class="g-pstyle21">slay</p>
+		</div>
+		<div id="g-ai3-65" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:54.3606%;margin-top:-7.5px;left:58.6305%;width:45px;">
+			<p class="g-pstyle13">yield</p>
+		</div>
+		<div id="g-ai3-66" class="g-lg g-aiAbs g-aiPointText" style="top:55.7044%;margin-top:-13.6px;left:40.6887%;width:63px;">
+			<p class="g-pstyle19">send</p>
+		</div>
+		<div id="g-ai3-67" class="g-lg g-aiAbs g-aiPointText" style="top:55.7044%;margin-top:-13.6px;left:40.6887%;width:63px;">
+			<p class="g-pstyle19">send</p>
+		</div>
+		<div id="g-ai3-68" class="g-lg g-aiAbs g-aiPointText" style="top:53.827%;margin-top:-7.3px;left:27.9185%;width:53px;">
+			<p class="g-pstyle17">swoon</p>
+		</div>
+		<div id="g-ai3-69" class="g-lg g-aiAbs g-aiPointText" style="top:53.827%;margin-top:-7.3px;left:27.9185%;width:53px;">
+			<p class="g-pstyle17">swoon</p>
+		</div>
+		<div id="g-ai3-70" class="g-lg g-aiAbs g-aiPointText" style="top:55.8361%;margin-top:-12.9px;left:49.7909%;width:54px;">
+			<p class="g-pstyle21">slay</p>
+		</div>
+		<div id="g-ai3-71" class="g-lg g-aiAbs g-aiPointText" style="top:55.8361%;margin-top:-12.9px;left:49.7909%;width:54px;">
+			<p class="g-pstyle21">slay</p>
+		</div>
+		<div id="g-ai3-72" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:58.2249%;margin-top:-16.4px;left:35.5092%;width:54px;">
+			<p class="g-pstyle22">tell</p>
+		</div>
+		<div id="g-ai3-73" class="g-lg g-aiAbs g-aiPointText" style="top:54.3606%;margin-top:-7.5px;left:58.6305%;width:45px;">
+			<p class="g-pstyle13">yield</p>
+		</div>
+		<div id="g-ai3-74" class="g-lg g-aiAbs g-aiPointText" style="top:54.3606%;margin-top:-7.5px;left:58.6305%;width:45px;">
+			<p class="g-pstyle13">yield</p>
+		</div>
+		<div id="g-ai3-75" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:55.6915%;margin-top:-6.6px;left:5.942%;width:50px;">
+			<p class="g-pstyle23">rebuke</p>
+		</div>
+		<div id="g-ai3-76" class="g-lg g-aiAbs g-aiPointText" style="top:58.2249%;margin-top:-16.4px;left:35.5092%;width:54px;">
+			<p class="g-pstyle22">tell</p>
+		</div>
+		<div id="g-ai3-77" class="g-lg g-aiAbs g-aiPointText" style="top:58.2249%;margin-top:-16.4px;left:35.5092%;width:54px;">
+			<p class="g-pstyle22">tell</p>
+		</div>
+		<div id="g-ai3-78" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.1246%;margin-top:-6.6px;left:23.1133%;width:40px;">
+			<p class="g-pstyle23">heal</p>
+		</div>
+		<div id="g-ai3-79" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.2251%;margin-top:-6.8px;left:17.0914%;width:46px;">
+			<p class="g-pstyle23">bleed</p>
+		</div>
+		<div id="g-ai3-80" class="g-lg g-aiAbs g-aiPointText" style="top:55.6915%;margin-top:-6.6px;left:5.942%;width:50px;">
+			<p class="g-pstyle23">rebuke</p>
+		</div>
+		<div id="g-ai3-81" class="g-lg g-aiAbs g-aiPointText" style="top:56.1246%;margin-top:-6.6px;left:23.1133%;width:40px;">
+			<p class="g-pstyle23">heal</p>
+		</div>
+		<div id="g-ai3-82" class="g-lg g-aiAbs g-aiPointText" style="top:56.1246%;margin-top:-6.6px;left:23.1133%;width:40px;">
+			<p class="g-pstyle23">heal</p>
+		</div>
+		<div id="g-ai3-83" class="g-lg g-aiAbs g-aiPointText" style="top:56.2251%;margin-top:-6.8px;left:17.0914%;width:46px;">
+			<p class="g-pstyle23">bleed</p>
+		</div>
+		<div id="g-ai3-84" class="g-lg g-aiAbs g-aiPointText" style="top:56.2251%;margin-top:-6.8px;left:17.0914%;width:46px;">
+			<p class="g-pstyle23">bleed</p>
+		</div>
+		<div id="g-ai3-85" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:58.2434%;margin-top:-8.5px;left:61.3244%;width:55px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai3-86" class="g-lg g-aiAbs g-aiPointText" style="top:58.2434%;margin-top:-8.5px;left:61.3244%;width:55px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai3-87" class="g-lg g-aiAbs g-aiPointText" style="top:58.2434%;margin-top:-8.5px;left:61.3244%;width:55px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai3-88" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:59.1571%;margin-top:-6.6px;left:31.3037%;width:48px;">
+			<p class="g-pstyle23">loveth</p>
+		</div>
+		<div id="g-ai3-89" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:61.5144%;margin-top:-11px;left:54.1265%;width:62px;">
+			<p class="g-pstyle24">alight</p>
+		</div>
+		<div id="g-ai3-90" class="g-lg g-aiAbs g-aiPointText" style="top:59.1571%;margin-top:-6.6px;left:31.3037%;width:48px;">
+			<p class="g-pstyle23">loveth</p>
+		</div>
+		<div id="g-ai3-91" class="g-lg g-aiAbs g-aiPointText" style="top:59.1571%;margin-top:-6.6px;left:31.3037%;width:48px;">
+			<p class="g-pstyle23">loveth</p>
+		</div>
+		<div id="g-ai3-92" class="g-lg g-aiAbs g-aiPointText" style="top:61.5144%;margin-top:-11px;left:54.2289%;width:62px;">
+			<p class="g-pstyle24">alight</p>
+		</div>
+		<div id="g-ai3-93" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:61.8564%;margin-top:-6.8px;left:47.0729%;width:62px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai3-94" class="g-lg g-aiAbs g-aiPointText" style="top:61.8564%;margin-top:-6.8px;left:47.0729%;width:62px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai3-95" class="g-lg g-aiAbs g-aiPointText" style="top:61.8564%;margin-top:-6.8px;left:47.0729%;width:62px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai3-96" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:63.5578%;margin-top:-7.7px;left:61.7111%;width:40px;">
+			<p class="g-pstyle13">feel</p>
+		</div>
+		<div id="g-ai3-97" class="g-lg g-aiAbs g-aiPointText" style="top:63.5578%;margin-top:-7.7px;left:61.7111%;width:40px;">
+			<p class="g-pstyle13">feel</p>
+		</div>
+		<div id="g-ai3-98" class="g-lg g-aiAbs g-aiPointText" style="top:63.5578%;margin-top:-7.7px;left:61.7111%;width:40px;">
+			<p class="g-pstyle13">feel</p>
+		</div>
+		<div id="g-ai3-99" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:64.7882%;margin-top:-6.6px;left:39.0565%;width:43px;">
+			<p class="g-pstyle23">shew</p>
+		</div>
+		<div id="g-ai3-100" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:65.6545%;margin-top:-6.6px;left:34.1922%;width:48px;">
+			<p class="g-pstyle23">devise</p>
+		</div>
+		<div id="g-ai3-101" class="g-lg g-aiAbs g-aiPointText" style="top:64.7882%;margin-top:-6.6px;left:39.0565%;width:43px;">
+			<p class="g-pstyle23">shew</p>
+		</div>
+		<div id="g-ai3-102" class="g-lg g-aiAbs g-aiPointText" style="top:64.7882%;margin-top:-6.6px;left:39.0565%;width:43px;">
+			<p class="g-pstyle23">shew</p>
+		</div>
+		<div id="g-ai3-103" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:67.4094%;margin-top:-9.6px;left:50.4987%;width:48px;">
+			<p class="g-pstyle14">look</p>
+		</div>
+		<div id="g-ai3-104" class="g-lg g-aiAbs g-aiPointText" style="top:65.6545%;margin-top:-6.6px;left:34.1922%;width:48px;">
+			<p class="g-pstyle23">devise</p>
+		</div>
+		<div id="g-ai3-105" class="g-lg g-aiAbs g-aiPointText" style="top:67.4094%;margin-top:-9.6px;left:50.4987%;width:48px;">
+			<p class="g-pstyle14">look</p>
+		</div>
+		<div id="g-ai3-106" class="g-lg g-aiAbs g-aiPointText" style="top:67.4094%;margin-top:-9.6px;left:50.4987%;width:48px;">
+			<p class="g-pstyle14">look</p>
+		</div>
+		<div id="g-ai3-107" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:68.8092%;margin-top:-9.8px;left:61.7438%;width:53px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai3-108" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:68.6053%;margin-top:-7.4px;left:55.9296%;width:44px;">
+			<p class="g-pstyle25">seem</p>
+		</div>
+		<div id="g-ai3-109" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:69.0728%;margin-top:-8.5px;left:39.6027%;width:53px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai3-110" class="g-lg g-aiAbs g-aiPointText" style="top:68.8092%;margin-top:-9.8px;left:61.7655%;width:53px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai3-111" class="g-lg g-aiAbs g-aiPointText" style="top:68.0213%;margin-top:-7px;left:55.8615%;width:45px;">
+			<p class="g-pstyle18">seem</p>
+		</div>
+		<div id="g-ai3-112" class="g-lg g-aiAbs g-aiPointText" style="top:69.0728%;margin-top:-8.5px;left:39.6027%;width:53px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai3-113" class="g-lg g-aiAbs g-aiPointText" style="top:69.0728%;margin-top:-8.5px;left:39.6027%;width:53px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai3-114" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:71.4774%;margin-top:-11px;left:35.8362%;width:44px;">
+			<p class="g-pstyle26">cry</p>
+		</div>
+		<div id="g-ai3-115" class="g-lg g-aiAbs g-aiPointText" style="top:71.4774%;margin-top:-11px;left:35.8362%;width:44px;">
+			<p class="g-pstyle26">cry</p>
+		</div>
+		<div id="g-ai3-116" class="g-lg g-aiAbs g-aiPointText" style="top:71.4774%;margin-top:-11px;left:35.8362%;width:44px;">
+			<p class="g-pstyle26">cry</p>
+		</div>
+		<div id="g-ai3-117" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:72.6073%;margin-top:-9.6px;left:51.4155%;width:41px;">
+			<p class="g-pstyle14">gat</p>
+		</div>
+		<div id="g-ai3-118" class="g-lg g-aiAbs g-aiPointText" style="top:72.6073%;margin-top:-9.6px;left:51.4155%;width:41px;">
+			<p class="g-pstyle14">gat</p>
+		</div>
+		<div id="g-ai3-119" class="g-lg g-aiAbs g-aiPointText" style="top:72.6073%;margin-top:-9.6px;left:51.4155%;width:41px;">
+			<p class="g-pstyle14">gat</p>
+		</div>
+		<div id="g-ai3-120" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:72.9872%;margin-top:-7.5px;left:54.9058%;width:44px;">
+			<p class="g-pstyle13">bear</p>
+		</div>
+		<div id="g-ai3-121" class="g-lg g-aiAbs g-aiPointText" style="top:72.9872%;margin-top:-7.5px;left:54.9058%;width:44px;">
+			<p class="g-pstyle13">bear</p>
+		</div>
+		<div id="g-ai3-122" class="g-lg g-aiAbs g-aiPointText" style="top:72.9872%;margin-top:-7.5px;left:54.9058%;width:44px;">
+			<p class="g-pstyle13">bear</p>
+		</div>
+		<div id="g-ai3-123" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:78.2073%;margin-top:-10.5px;left:35.5692%;width:51px;">
+			<p class="g-pstyle27">pray</p>
+		</div>
+		<div id="g-ai3-124" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:78.4867%;margin-top:-8.2px;left:53.4744%;width:49px;">
+			<p class="g-pstyle11">leapt</p>
+		</div>
+		<div id="g-ai3-125" class="g-lg g-aiAbs g-aiPointText" style="top:78.2073%;margin-top:-10.5px;left:35.5692%;width:51px;">
+			<p class="g-pstyle27">pray</p>
+		</div>
+		<div id="g-ai3-126" class="g-lg g-aiAbs g-aiPointText" style="top:78.2073%;margin-top:-10.5px;left:35.5692%;width:51px;">
+			<p class="g-pstyle27">pray</p>
+		</div>
+		<div id="g-ai3-127" class="g-lg g-aiAbs g-aiPointText" style="top:78.4867%;margin-top:-8.2px;left:53.4744%;width:49px;">
+			<p class="g-pstyle11">leapt</p>
+		</div>
+		<div id="g-ai3-128" class="g-lg g-aiAbs g-aiPointText" style="top:78.4867%;margin-top:-8.2px;left:53.4744%;width:49px;">
+			<p class="g-pstyle11">leapt</p>
+		</div>
+		<div id="g-ai3-129" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:81.7825%;margin-top:-6.8px;left:50.6381%;width:38px;">
+			<p class="g-pstyle5">fare</p>
+		</div>
+		<div id="g-ai3-130" class="g-lg g-aiAbs g-aiPointText" style="top:81.7825%;margin-top:-6.8px;left:50.6671%;width:38px;">
+			<p class="g-pstyle5">fare</p>
+		</div>
+		<div id="g-ai3-131" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:84.8147%;margin-top:-6.8px;left:34.1922%;width:41px;">
+			<p class="g-pstyle23">help</p>
+		</div>
+		<div id="g-ai3-132" class="g-lg g-aiAbs g-aiPointText" style="top:84.8147%;margin-top:-6.8px;left:34.1922%;width:41px;">
+			<p class="g-pstyle23">help</p>
+		</div>
+		<div id="g-ai3-133" class="g-lg g-aiAbs g-aiPointText" style="top:84.8147%;margin-top:-6.8px;left:34.1922%;width:41px;">
+			<p class="g-pstyle23">help</p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_6 -->
+	<div id="g-practice-Artboard_6" class="g-artboard" style="width:659px; height:231.404883863239px;" data-aspect-ratio="2.848" data-min-width="659" data-max-width="659">
+<div style=""></div>
+		<img id="g-practice-Artboard_6-img" class="g-practice-Artboard_6-img g-aiImg" alt="" src="ai2html/images/practice-Artboard_6.png"/>
+		<div id="g-ai4-1" class="g-lg g-aiAbs" style="top:6.4821%;right:40.3062%;width:6.2215%;">
+			<p class="g-pstyle0">4x<span class="g-cstyle0"> </span></p>
+			<p class="g-pstyle1">more likely to be used for men to use</p>
+		</div>
+		<div id="g-ai4-2" class="g-lg g-aiAbs" style="top:6.4821%;left:47.0389%;margin-left:-3.1866%;width:6.3733%;">
+			<p class="g-pstyle2">50/50 split</p>
+		</div>
+		<div id="g-ai4-3" class="g-lg g-aiAbs" style="top:9.5071%;right:7.7859%;width:6.2215%;">
+			<p class="g-pstyle0">52x </p>
+			<p class="g-pstyle1">more likely for men to use</p>
+		</div>
+		<div id="g-ai4-4" class="g-lg g-aiAbs" style="top:14.2607%;left:6.8195%;width:7.2838%;">
+			<p class="g-pstyle3">12x </p>
+			<p class="g-pstyle4">more likely to be used for women</p>
+		</div>
+		<div id="g-ai4-5" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:32.3232%;margin-top:-6.8px;left:48.4252%;width:51px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai4-6" class="g-lg g-aiAbs g-aiPointText" style="top:32.3232%;margin-top:-6.8px;left:48.4252%;width:51px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai4-7" class="g-lg g-aiAbs g-aiPointText" style="top:32.3232%;margin-top:-6.8px;left:48.4252%;width:51px;">
+			<p class="g-pstyle5">proffer</p>
+		</div>
+		<div id="g-ai4-8" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:34.7689%;margin-top:-8.5px;left:35.5585%;width:43px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai4-9" class="g-lg g-aiAbs g-aiPointText" style="top:34.7689%;margin-top:-8.5px;left:35.5585%;width:43px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai4-10" class="g-lg g-aiAbs g-aiPointText" style="top:34.7689%;margin-top:-8.5px;left:35.5585%;width:43px;">
+			<p class="g-pstyle6">lose</p>
+		</div>
+		<div id="g-ai4-11" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:36.9294%;margin-top:-8.5px;left:47.7788%;width:58px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai4-12" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:37.5308%;margin-top:-9.8px;left:59.6458%;width:48px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai4-13" class="g-lg g-aiAbs g-aiPointText" style="top:36.9294%;margin-top:-8.5px;left:47.7788%;width:58px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai4-14" class="g-lg g-aiAbs g-aiPointText" style="top:36.9294%;margin-top:-8.5px;left:47.7788%;width:58px;">
+			<p class="g-pstyle7">escape</p>
+		</div>
+		<div id="g-ai4-15" class="g-lg g-aiAbs g-aiPointText" style="top:37.5308%;margin-top:-9.8px;left:59.6458%;width:48px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai4-16" class="g-lg g-aiAbs g-aiPointText" style="top:37.5308%;margin-top:-9.8px;left:59.6458%;width:48px;">
+			<p class="g-pstyle8">turn</p>
+		</div>
+		<div id="g-ai4-17" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:39.2908%;margin-top:-8.9px;left:38.3214%;width:52px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai4-18" class="g-lg g-aiAbs g-aiPointText" style="top:39.2908%;margin-top:-8.9px;left:38.3214%;width:52px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai4-19" class="g-lg g-aiAbs g-aiPointText" style="top:39.2908%;margin-top:-8.9px;left:38.3214%;width:52px;">
+			<p class="g-pstyle9">weep</p>
+		</div>
+		<div id="g-ai4-20" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:43.534%;margin-top:-11.7px;left:33.129%;width:52px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai4-21" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:42.1624%;margin-top:-6.6px;left:48.3592%;width:46px;">
+			<p class="g-pstyle5">dread</p>
+		</div>
+		<div id="g-ai4-22" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:43.296%;margin-top:-8.2px;left:62.4776%;width:55px;">
+			<p class="g-pstyle11">follow</p>
+		</div>
+		<div id="g-ai4-23" class="g-lg g-aiAbs g-aiPointText" style="top:48.0236%;margin-top:-22.1px;left:33.129%;width:52px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai4-24" class="g-lg g-aiAbs g-aiPointText" style="top:43.534%;margin-top:-11.7px;left:33.129%;width:52px;">
+			<p class="g-pstyle10">love</p>
+		</div>
+		<div id="g-ai4-25" class="g-lg g-aiAbs g-aiPointText" style="top:42.1624%;margin-top:-6.6px;left:48.3592%;width:46px;">
+			<p class="g-pstyle5">dread</p>
+		</div>
+		<div id="g-ai4-26" class="g-lg g-aiAbs g-aiPointText" style="top:42.1624%;margin-top:-6.6px;left:48.3592%;width:46px;">
+			<p class="g-pstyle5">dread</p>
+		</div>
+		<div id="g-ai4-27" class="g-lg g-aiAbs g-aiPointText" style="top:43.296%;margin-top:-8.2px;left:62.4776%;width:55px;">
+			<p class="g-pstyle11">follow</p>
+		</div>
+		<div id="g-ai4-28" class="g-lg g-aiAbs g-aiPointText" style="top:43.296%;margin-top:-8.2px;left:62.4776%;width:55px;">
+			<p class="g-pstyle11">follow</p>
+		</div>
+		<div id="g-ai4-29" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:46.5277%;margin-top:-12.7px;left:38.3214%;width:63px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai4-30" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:45.5881%;margin-top:-7.5px;left:55.6245%;width:56px;">
+			<p class="g-pstyle13">endure</p>
+		</div>
+		<div id="g-ai4-31" class="g-lg g-aiAbs g-aiPointText" style="top:46.5277%;margin-top:-12.7px;left:38.3214%;width:63px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai4-32" class="g-lg g-aiAbs g-aiPointText" style="top:46.5277%;margin-top:-12.7px;left:38.3214%;width:63px;">
+			<p class="g-pstyle12">bring</p>
+		</div>
+		<div id="g-ai4-33" class="g-lg g-aiAbs g-aiPointText" style="top:45.5881%;margin-top:-7.5px;left:55.6245%;width:56px;">
+			<p class="g-pstyle13">endure</p>
+		</div>
+		<div id="g-ai4-34" class="g-lg g-aiAbs g-aiPointText" style="top:45.5881%;margin-top:-7.5px;left:55.6245%;width:56px;">
+			<p class="g-pstyle13">endure</p>
+		</div>
+		<div id="g-ai4-35" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:46.4839%;margin-top:-6.6px;left:50.1121%;width:35px;">
+			<p class="g-pstyle5">eat</p>
+		</div>
+		<div id="g-ai4-36" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:48.1339%;margin-top:-9.4px;left:68.7756%;width:43px;">
+			<p class="g-pstyle14">win</p>
+		</div>
+		<div id="g-ai4-37" class="g-lg g-aiAbs g-aiPointText" style="top:46.4839%;margin-top:-6.6px;left:50.1121%;width:35px;">
+			<p class="g-pstyle5">eat</p>
+		</div>
+		<div id="g-ai4-38" class="g-lg g-aiAbs g-aiPointText" style="top:46.4839%;margin-top:-6.6px;left:50.1121%;width:35px;">
+			<p class="g-pstyle5">eat</p>
+		</div>
+		<div id="g-ai4-39" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:49.0984%;margin-top:-9.6px;left:73.2488%;width:54px;">
+			<p class="g-pstyle14">dress</p>
+		</div>
+		<div id="g-ai4-40" class="g-lg g-aiAbs g-aiPointText" style="top:48.1339%;margin-top:-9.4px;left:68.7756%;width:43px;">
+			<p class="g-pstyle14">win</p>
+		</div>
+		<div id="g-ai4-41" class="g-lg g-aiAbs g-aiPointText" style="top:48.1339%;margin-top:-9.4px;left:68.7756%;width:43px;">
+			<p class="g-pstyle14">win</p>
+		</div>
+		<div id="g-ai4-42" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:49.0295%;margin-top:-8.5px;left:61.0597%;width:42px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai4-43" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:50.6799%;margin-top:-11.3px;left:34.2269%;width:43px;">
+			<p class="g-pstyle15">die</p>
+		</div>
+		<div id="g-ai4-44" class="g-lg g-aiAbs g-aiPointText" style="top:49.0984%;margin-top:-9.6px;left:73.2488%;width:54px;">
+			<p class="g-pstyle14">dress</p>
+		</div>
+		<div id="g-ai4-45" class="g-lg g-aiAbs g-aiPointText" style="top:49.0984%;margin-top:-9.6px;left:73.2488%;width:54px;">
+			<p class="g-pstyle14">dress</p>
+		</div>
+		<div id="g-ai4-46" class="g-lg g-aiAbs g-aiPointText" style="top:49.0295%;margin-top:-8.5px;left:61.0597%;width:42px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai4-47" class="g-lg g-aiAbs g-aiPointText" style="top:49.0295%;margin-top:-8.5px;left:61.0597%;width:42px;">
+			<p class="g-pstyle7">pull</p>
+		</div>
+		<div id="g-ai4-48" class="g-lg g-aiAbs g-aiPointText" style="top:50.6799%;margin-top:-11.3px;left:34.2269%;width:43px;">
+			<p class="g-pstyle15">die</p>
+		</div>
+		<div id="g-ai4-49" class="g-lg g-aiAbs g-aiPointText" style="top:50.6799%;margin-top:-11.3px;left:34.2269%;width:43px;">
+			<p class="g-pstyle15">die</p>
+		</div>
+		<div id="g-ai4-50" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:55.1092%;margin-top:-19.5px;left:87.9287%;width:91px;">
+			<p class="g-pstyle16">smite</p>
+		</div>
+		<div id="g-ai4-51" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:50.3729%;margin-top:-6.6px;left:47.7788%;width:48px;">
+			<p class="g-pstyle5">abode</p>
+		</div>
+		<div id="g-ai4-52" class="g-lg g-aiAbs g-aiPointText" style="top:55.024%;margin-top:-19.3px;left:88.0601%;width:90px;">
+			<p class="g-pstyle16">smite</p>
+		</div>
+		<div id="g-ai4-53" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:51.3374%;margin-top:-6.8px;left:52.9843%;width:51px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai4-54" class="g-lg g-aiAbs g-aiPointText" style="top:50.3729%;margin-top:-6.6px;left:47.7788%;width:48px;">
+			<p class="g-pstyle5">abode</p>
+		</div>
+		<div id="g-ai4-55" class="g-lg g-aiAbs g-aiPointText" style="top:50.3729%;margin-top:-6.6px;left:47.7788%;width:48px;">
+			<p class="g-pstyle5">abode</p>
+		</div>
+		<div id="g-ai4-56" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:52.302%;margin-top:-7px;left:37.7787%;width:45px;">
+			<p class="g-pstyle17">grant</p>
+		</div>
+		<div id="g-ai4-57" class="g-lg g-aiAbs g-aiPointText" style="top:51.3374%;margin-top:-6.8px;left:52.9843%;width:51px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai4-58" class="g-lg g-aiAbs g-aiPointText" style="top:51.3374%;margin-top:-6.8px;left:52.9843%;width:51px;">
+			<p class="g-pstyle5">mount</p>
+		</div>
+		<div id="g-ai4-59" class="g-lg g-aiAbs g-aiPointText" style="top:52.302%;margin-top:-7px;left:37.7787%;width:45px;">
+			<p class="g-pstyle17">grant</p>
+		</div>
+		<div id="g-ai4-60" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:53.714%;margin-top:-7.3px;left:64.6382%;width:58px;">
+			<p class="g-pstyle18">marvel</p>
+		</div>
+		<div id="g-ai4-61" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.4358%;margin-top:-13.6px;left:40.6672%;width:63px;">
+			<p class="g-pstyle19">send</p>
+		</div>
+		<div id="g-ai4-62" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:54.5629%;margin-top:-7.3px;left:27.8776%;width:53px;">
+			<p class="g-pstyle17">swoon</p>
+		</div>
+		<div id="g-ai4-63" class="g-lg g-aiAbs g-aiPointText" style="top:53.5306%;margin-top:-7.9px;left:64.5839%;width:55px;">
+			<p class="g-pstyle20">marvel</p>
+		</div>
+		<div id="g-ai4-64" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:56.5673%;margin-top:-12.9px;left:49.7832%;width:54px;">
+			<p class="g-pstyle21">slay</p>
+		</div>
+		<div id="g-ai4-65" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:55.0953%;margin-top:-7.5px;left:58.6362%;width:45px;">
+			<p class="g-pstyle13">yield</p>
+		</div>
+		<div id="g-ai4-66" class="g-lg g-aiAbs g-aiPointText" style="top:56.4358%;margin-top:-13.6px;left:40.6672%;width:63px;">
+			<p class="g-pstyle19">send</p>
+		</div>
+		<div id="g-ai4-67" class="g-lg g-aiAbs g-aiPointText" style="top:56.4358%;margin-top:-13.6px;left:40.6672%;width:63px;">
+			<p class="g-pstyle19">send</p>
+		</div>
+		<div id="g-ai4-68" class="g-lg g-aiAbs g-aiPointText" style="top:54.5629%;margin-top:-7.3px;left:27.8776%;width:53px;">
+			<p class="g-pstyle17">swoon</p>
+		</div>
+		<div id="g-ai4-69" class="g-lg g-aiAbs g-aiPointText" style="top:54.5629%;margin-top:-7.3px;left:27.8776%;width:53px;">
+			<p class="g-pstyle17">swoon</p>
+		</div>
+		<div id="g-ai4-70" class="g-lg g-aiAbs g-aiPointText" style="top:56.5673%;margin-top:-12.9px;left:49.7832%;width:54px;">
+			<p class="g-pstyle21">slay</p>
+		</div>
+		<div id="g-ai4-71" class="g-lg g-aiAbs g-aiPointText" style="top:56.5673%;margin-top:-12.9px;left:49.7832%;width:54px;">
+			<p class="g-pstyle21">slay</p>
+		</div>
+		<div id="g-ai4-72" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:58.9504%;margin-top:-16.4px;left:35.4799%;width:54px;">
+			<p class="g-pstyle22">tell</p>
+		</div>
+		<div id="g-ai4-73" class="g-lg g-aiAbs g-aiPointText" style="top:55.0953%;margin-top:-7.5px;left:58.6362%;width:45px;">
+			<p class="g-pstyle13">yield</p>
+		</div>
+		<div id="g-ai4-74" class="g-lg g-aiAbs g-aiPointText" style="top:55.0953%;margin-top:-7.5px;left:58.6362%;width:45px;">
+			<p class="g-pstyle13">yield</p>
+		</div>
+		<div id="g-ai4-75" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.4229%;margin-top:-6.6px;left:5.8678%;width:50px;">
+			<p class="g-pstyle23">rebuke</p>
+		</div>
+		<div id="g-ai4-76" class="g-lg g-aiAbs g-aiPointText" style="top:58.9504%;margin-top:-16.4px;left:35.4799%;width:54px;">
+			<p class="g-pstyle22">tell</p>
+		</div>
+		<div id="g-ai4-77" class="g-lg g-aiAbs g-aiPointText" style="top:58.9504%;margin-top:-16.4px;left:35.4799%;width:54px;">
+			<p class="g-pstyle22">tell</p>
+		</div>
+		<div id="g-ai4-78" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.8551%;margin-top:-6.6px;left:23.0651%;width:40px;">
+			<p class="g-pstyle23">heal</p>
+		</div>
+		<div id="g-ai4-79" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:56.9553%;margin-top:-6.8px;left:17.0341%;width:46px;">
+			<p class="g-pstyle23">bleed</p>
+		</div>
+		<div id="g-ai4-80" class="g-lg g-aiAbs g-aiPointText" style="top:56.4229%;margin-top:-6.6px;left:5.8678%;width:50px;">
+			<p class="g-pstyle23">rebuke</p>
+		</div>
+		<div id="g-ai4-81" class="g-lg g-aiAbs g-aiPointText" style="top:56.8551%;margin-top:-6.6px;left:23.0651%;width:40px;">
+			<p class="g-pstyle23">heal</p>
+		</div>
+		<div id="g-ai4-82" class="g-lg g-aiAbs g-aiPointText" style="top:56.8551%;margin-top:-6.6px;left:23.0651%;width:40px;">
+			<p class="g-pstyle23">heal</p>
+		</div>
+		<div id="g-ai4-83" class="g-lg g-aiAbs g-aiPointText" style="top:56.9553%;margin-top:-6.8px;left:17.0341%;width:46px;">
+			<p class="g-pstyle23">bleed</p>
+		</div>
+		<div id="g-ai4-84" class="g-lg g-aiAbs g-aiPointText" style="top:56.9553%;margin-top:-6.8px;left:17.0341%;width:46px;">
+			<p class="g-pstyle23">bleed</p>
+		</div>
+		<div id="g-ai4-85" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:58.9687%;margin-top:-8.5px;left:61.3342%;width:55px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai4-86" class="g-lg g-aiAbs g-aiPointText" style="top:58.9687%;margin-top:-8.5px;left:61.3342%;width:55px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai4-87" class="g-lg g-aiAbs g-aiPointText" style="top:58.9687%;margin-top:-8.5px;left:61.3342%;width:55px;">
+			<p class="g-pstyle7">awake</p>
+		</div>
+		<div id="g-ai4-88" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:59.8803%;margin-top:-6.6px;left:31.2679%;width:48px;">
+			<p class="g-pstyle23">loveth</p>
+		</div>
+		<div id="g-ai4-89" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:62.232%;margin-top:-11px;left:54.1254%;width:62px;">
+			<p class="g-pstyle24">alight</p>
+		</div>
+		<div id="g-ai4-90" class="g-lg g-aiAbs g-aiPointText" style="top:59.8803%;margin-top:-6.6px;left:31.2679%;width:48px;">
+			<p class="g-pstyle23">loveth</p>
+		</div>
+		<div id="g-ai4-91" class="g-lg g-aiAbs g-aiPointText" style="top:59.8803%;margin-top:-6.6px;left:31.2679%;width:48px;">
+			<p class="g-pstyle23">loveth</p>
+		</div>
+		<div id="g-ai4-92" class="g-lg g-aiAbs g-aiPointText" style="top:62.232%;margin-top:-11px;left:54.2279%;width:62px;">
+			<p class="g-pstyle24">alight</p>
+		</div>
+		<div id="g-ai4-93" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:62.5732%;margin-top:-6.8px;left:47.0611%;width:62px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai4-94" class="g-lg g-aiAbs g-aiPointText" style="top:62.5732%;margin-top:-6.8px;left:47.0611%;width:62px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai4-95" class="g-lg g-aiAbs g-aiPointText" style="top:62.5732%;margin-top:-6.8px;left:47.0611%;width:62px;">
+			<p class="g-pstyle5">withdraw</p>
+		</div>
+		<div id="g-ai4-96" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:64.2705%;margin-top:-7.7px;left:61.7215%;width:40px;">
+			<p class="g-pstyle13">feel</p>
+		</div>
+		<div id="g-ai4-97" class="g-lg g-aiAbs g-aiPointText" style="top:64.2705%;margin-top:-7.7px;left:61.7215%;width:40px;">
+			<p class="g-pstyle13">feel</p>
+		</div>
+		<div id="g-ai4-98" class="g-lg g-aiAbs g-aiPointText" style="top:64.2705%;margin-top:-7.7px;left:61.7215%;width:40px;">
+			<p class="g-pstyle13">feel</p>
+		</div>
+		<div id="g-ai4-99" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:65.4979%;margin-top:-6.6px;left:39.0325%;width:43px;">
+			<p class="g-pstyle23">shew</p>
+		</div>
+		<div id="g-ai4-100" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:66.3622%;margin-top:-6.6px;left:34.1608%;width:48px;">
+			<p class="g-pstyle23">devise</p>
+		</div>
+		<div id="g-ai4-101" class="g-lg g-aiAbs g-aiPointText" style="top:65.4979%;margin-top:-6.6px;left:39.0325%;width:43px;">
+			<p class="g-pstyle23">shew</p>
+		</div>
+		<div id="g-ai4-102" class="g-lg g-aiAbs g-aiPointText" style="top:65.4979%;margin-top:-6.6px;left:39.0325%;width:43px;">
+			<p class="g-pstyle23">shew</p>
+		</div>
+		<div id="g-ai4-103" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:68.113%;margin-top:-9.6px;left:50.4921%;width:48px;">
+			<p class="g-pstyle14">look</p>
+		</div>
+		<div id="g-ai4-104" class="g-lg g-aiAbs g-aiPointText" style="top:66.3622%;margin-top:-6.6px;left:34.1608%;width:48px;">
+			<p class="g-pstyle23">devise</p>
+		</div>
+		<div id="g-ai4-105" class="g-lg g-aiAbs g-aiPointText" style="top:68.113%;margin-top:-9.6px;left:50.4921%;width:48px;">
+			<p class="g-pstyle14">look</p>
+		</div>
+		<div id="g-ai4-106" class="g-lg g-aiAbs g-aiPointText" style="top:68.113%;margin-top:-9.6px;left:50.4921%;width:48px;">
+			<p class="g-pstyle14">look</p>
+		</div>
+		<div id="g-ai4-107" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:69.5094%;margin-top:-9.8px;left:61.7543%;width:53px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai4-108" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:69.306%;margin-top:-7.4px;left:55.9312%;width:44px;">
+			<p class="g-pstyle25">seem</p>
+		</div>
+		<div id="g-ai4-109" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:69.7723%;margin-top:-8.5px;left:39.5795%;width:53px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai4-110" class="g-lg g-aiAbs g-aiPointText" style="top:69.5094%;margin-top:-9.8px;left:61.7759%;width:53px;">
+			<p class="g-pstyle8">draw</p>
+		</div>
+		<div id="g-ai4-111" class="g-lg g-aiAbs g-aiPointText" style="top:68.7234%;margin-top:-7px;left:55.863%;width:45px;">
+			<p class="g-pstyle18">seem</p>
+		</div>
+		<div id="g-ai4-112" class="g-lg g-aiAbs g-aiPointText" style="top:69.7723%;margin-top:-8.5px;left:39.5795%;width:53px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai4-113" class="g-lg g-aiAbs g-aiPointText" style="top:69.7723%;margin-top:-8.5px;left:39.5795%;width:53px;">
+			<p class="g-pstyle6">desire</p>
+		</div>
+		<div id="g-ai4-114" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:72.1713%;margin-top:-11px;left:35.8073%;width:44px;">
+			<p class="g-pstyle26">cry</p>
+		</div>
+		<div id="g-ai4-115" class="g-lg g-aiAbs g-aiPointText" style="top:72.1713%;margin-top:-11px;left:35.8073%;width:44px;">
+			<p class="g-pstyle26">cry</p>
+		</div>
+		<div id="g-ai4-116" class="g-lg g-aiAbs g-aiPointText" style="top:72.1713%;margin-top:-11px;left:35.8073%;width:44px;">
+			<p class="g-pstyle26">cry</p>
+		</div>
+		<div id="g-ai4-117" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:73.2985%;margin-top:-9.6px;left:51.4103%;width:41px;">
+			<p class="g-pstyle14">gat</p>
+		</div>
+		<div id="g-ai4-118" class="g-lg g-aiAbs g-aiPointText" style="top:73.2985%;margin-top:-9.6px;left:51.4103%;width:41px;">
+			<p class="g-pstyle14">gat</p>
+		</div>
+		<div id="g-ai4-119" class="g-lg g-aiAbs g-aiPointText" style="top:73.2985%;margin-top:-9.6px;left:51.4103%;width:41px;">
+			<p class="g-pstyle14">gat</p>
+		</div>
+		<div id="g-ai4-120" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:73.6774%;margin-top:-7.5px;left:54.9059%;width:44px;">
+			<p class="g-pstyle13">bear</p>
+		</div>
+		<div id="g-ai4-121" class="g-lg g-aiAbs g-aiPointText" style="top:73.6774%;margin-top:-7.5px;left:54.9059%;width:44px;">
+			<p class="g-pstyle13">bear</p>
+		</div>
+		<div id="g-ai4-122" class="g-lg g-aiAbs g-aiPointText" style="top:73.6774%;margin-top:-7.5px;left:54.9059%;width:44px;">
+			<p class="g-pstyle13">bear</p>
+		</div>
+		<div id="g-ai4-123" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:78.8851%;margin-top:-10.5px;left:35.5399%;width:51px;">
+			<p class="g-pstyle27">pray</p>
+		</div>
+		<div id="g-ai4-124" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:79.1638%;margin-top:-8.2px;left:53.4723%;width:49px;">
+			<p class="g-pstyle11">leapt</p>
+		</div>
+		<div id="g-ai4-125" class="g-lg g-aiAbs g-aiPointText" style="top:78.8851%;margin-top:-10.5px;left:35.5399%;width:51px;">
+			<p class="g-pstyle27">pray</p>
+		</div>
+		<div id="g-ai4-126" class="g-lg g-aiAbs g-aiPointText" style="top:78.8851%;margin-top:-10.5px;left:35.5399%;width:51px;">
+			<p class="g-pstyle27">pray</p>
+		</div>
+		<div id="g-ai4-127" class="g-lg g-aiAbs g-aiPointText" style="top:79.1638%;margin-top:-8.2px;left:53.4723%;width:49px;">
+			<p class="g-pstyle11">leapt</p>
+		</div>
+		<div id="g-ai4-128" class="g-lg g-aiAbs g-aiPointText" style="top:79.1638%;margin-top:-8.2px;left:53.4723%;width:49px;">
+			<p class="g-pstyle11">leapt</p>
+		</div>
+		<div id="g-ai4-129" class="g-red-text-shadow g-aiAbs g-aiPointText" style="top:82.4517%;margin-top:-6.8px;left:50.6317%;width:38px;">
+			<p class="g-pstyle5">fare</p>
+		</div>
+		<div id="g-ai4-130" class="g-lg g-aiAbs g-aiPointText" style="top:82.4517%;margin-top:-6.8px;left:50.6607%;width:38px;">
+			<p class="g-pstyle5">fare</p>
+		</div>
+		<div id="g-ai4-131" class="g-blue-text-shadow g-aiAbs g-aiPointText" style="top:85.4767%;margin-top:-6.8px;left:34.1608%;width:41px;">
+			<p class="g-pstyle23">help</p>
+		</div>
+		<div id="g-ai4-132" class="g-lg g-aiAbs g-aiPointText" style="top:85.4767%;margin-top:-6.8px;left:34.1608%;width:41px;">
+			<p class="g-pstyle23">help</p>
+		</div>
+		<div id="g-ai4-133" class="g-lg g-aiAbs g-aiPointText" style="top:85.4767%;margin-top:-6.8px;left:34.1608%;width:41px;">
+			<p class="g-pstyle23">help</p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	(function (containerId, opts) {
+			var nameSpace = opts.namespace || '';
+			var containers = findContainers(containerId);
+			containers.forEach(resize);
+
+			function resize(container) {
+				var onResize = throttle(update, 200);
+				var waiting = !!window.IntersectionObserver;
+				var observer;
+				update();
+
+				document.addEventListener('DOMContentLoaded', update);
+				window.addEventListener('resize', onResize);
+
+				// NYT Scoop-specific code
+				if (opts.setup) {
+					opts.setup(container).on('cleanup', cleanup);
+				}
+
+				function cleanup() {
+					document.removeEventListener('DOMContentLoaded', update);
+					window.removeEventListener('resize', onResize);
+					if (observer) observer.disconnect();
+				}
+
+				function update() {
+					var artboards = selectChildren('.' + nameSpace + 'artboard[data-min-width]', container),
+						width = Math.round(container.getBoundingClientRect().width);
+
+					// Set artboard visibility based on container width
+					artboards.forEach(function (el) {
+						var minwidth = el.getAttribute('data-min-width'),
+							maxwidth = el.getAttribute('data-max-width');
+						if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+							if (!waiting) {
+								selectChildren('.' + nameSpace + 'aiImg', el).forEach(updateImgSrc);
+							}
+							el.style.display = 'block';
+						} else {
+							el.style.display = 'none';
+						}
+					});
+
+					// Initialize lazy loading on first call
+					if (waiting && !observer) {
+						if (elementInView(container)) {
+							waiting = false;
+							update();
+						} else {
+							observer = new IntersectionObserver(onIntersectionChange, {});
+							observer.observe(container);
+						}
+					}
+				}
+
+				function onIntersectionChange(entries) {
+					// There may be multiple entries relating to the same container
+					// (captured at different times)
+					var isIntersecting = entries.reduce(function (memo, entry) {
+						return memo || entry.isIntersecting;
+					}, false);
+					if (isIntersecting) {
+						waiting = false;
+						// update: don't remove -- we need the observer to trigger an update
+						// when a hidden map becomes visible after user interaction
+						// (e.g. when an accordion menu or tab opens)
+						// observer.disconnect();
+						// observer = null;
+						update();
+					}
+				}
+			}
+
+			function findContainers(id) {
+				// support duplicate ids on the page
+				return selectChildren('.ai2html-responsive', document).filter(function (el) {
+					if (el.getAttribute('id') != id) return false;
+					if (el.classList.contains('ai2html-resizer')) return false;
+					el.classList.add('ai2html-resizer');
+					return true;
+				});
+			}
+
+			// Replace blank placeholder image with actual image
+			function updateImgSrc(img) {
+				var src = img.getAttribute('data-src');
+				if (src && img.getAttribute('src') != src) {
+					img.setAttribute('src', src);
+				}
+			}
+
+			function elementInView(el) {
+				var bounds = el.getBoundingClientRect();
+				return bounds.top < window.innerHeight && bounds.bottom > 0;
+			}
+
+			function selectChildren(selector, parent) {
+				return parent ? Array.prototype.slice.call(parent.querySelectorAll(selector)) : [];
+			}
+
+			// based on underscore.js
+			function throttle(func, wait) {
+				var timeout = null, previous = 0;
+				function run() {
+					previous = Date.now();
+					timeout = null;
+					func();
+				}
+				return function () {
+					var remaining = wait - (Date.now() - previous);
+					if (remaining <= 0 || remaining > wait) {
+						clearTimeout(timeout);
+						run();
+					} else if (!timeout) {
+						timeout = setTimeout(run, remaining);
+					}
+				};
+			}
+		})("g-practice-box", {namespace: "g-", setup: window.setupInteractive || window.getComponent});
+</script>
+<!-- End ai2html - 2023-08-09 20:21 -->
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="story-body">
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+</body>
+
+</html>
