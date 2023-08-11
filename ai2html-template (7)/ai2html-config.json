@@ -1,0 +1,35 @@
+{
+    "fonts": [
+        {
+            "aifont": "Impact",
+            "family": "Amatic SC",
+            "weight": "400",
+            "style": ""
+        },
+        {
+            "aifont": "AdobeCleanUX-Bold",
+            "family": "Assistant",
+            "weight": "700",
+            "style": ""
+        },
+        {
+            "aifont": "AdobeCleanUX-Regular",
+            "family": "Assistant",
+            "weight": "400",
+            "style": ""
+        },
+        {
+            "aifont": "AssistantRoman-Bold",
+            "family": "Assistant",
+            "weight": "700",
+            "style": ""
+        },
+        {
+            "aifont": "AssistantRoman-Regular",
+            "family": "Assistant",
+            "weight": "400",
+            "style": ""
+        }
+        
+    ]
+}
